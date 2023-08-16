@@ -10,13 +10,11 @@ class ClassesProvider(jmodFilePath: Path) {
 
     fun getAllClasses(): List<Class<*>> {
         val result = mutableListOf<Class<*>>()
-
         for ((i, jmod) in jmods.withIndex()) {
             println("$i/${jmods.size}")
-            println(jmod)
 
             val builder = ProcessBuilder()
-            builder.command("/Users/vfeofilaktov/Library/Java/JavaVirtualMachines/azul-16.0.2/Contents/Home/bin/jmod", "list", jmod.absolutePath)
+            builder.command("jmod", "list", jmod.absolutePath)
 
             val process = builder.start()
             process.waitFor(10, TimeUnit.SECONDS)
@@ -28,7 +26,6 @@ class ClassesProvider(jmodFilePath: Path) {
             process.inputStream.close()
             process.errorStream.close()
         }
-
         return result
     }
 
@@ -37,7 +34,8 @@ class ClassesProvider(jmodFilePath: Path) {
             .filter { line -> line.endsWith(".class") && line.startsWith("classes/") }
             .map { line -> line.removePrefix("classes/").removeSuffix(".class") }
             .map { line -> line.replace("/", ".") }
-            .mapNotNull { klass -> try {
+            .mapNotNull { klass ->
+                try {
                     Class.forName(klass)
                 } catch (_: Throwable) {
                     null

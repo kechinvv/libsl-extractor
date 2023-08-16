@@ -60,7 +60,7 @@ class JavaLibrarySpecifier(jmodFilePath: Path) {
             .filter { field -> field.type.canAddToSpecification }
             .filter { field -> field.isEnumConstant }
             .mapIndexed { index, field ->
-                field.name to IntegerLiteral(index)
+                field.name to IntegerLiteral(index, null)
             }
             .toMap()
 
@@ -86,10 +86,10 @@ class JavaLibrarySpecifier(jmodFilePath: Path) {
         get() {
             return when {
                 this.isArray -> {
-                    @Suppress("RecursivePropertyAccessor")
                     val typeRef = this.componentType.typeReference
                     TypeReferenceBuilder.build("array", typeRef, context = libslContext)
                 }
+
                 else -> {
                     TypeReferenceBuilder.build(
                         name = this.name,
