@@ -74,7 +74,7 @@ class JvmClassReaderStage : AnalysisStage {
         val entries = mutableMapOf<String, IntegerLiteral>()
 
         for ((index, field) in enumFields.withIndex()) {
-            entries[field.name] = IntegerLiteral(index)
+            entries[field.name] = IntegerLiteral(index, null)
         }
 
         return EnumType(klass.lslName, entries, context)
@@ -125,7 +125,7 @@ class JvmClassReaderStage : AnalysisStage {
             }
 
             val constructorVariables = constructorArgs.mapIndexed { index, argType ->
-                ConstructorArgument(VariableKeyword.VAL,"arg$index", argType)
+                ConstructorArgument(VariableKind.VAL,"arg$index", argType)
             }.toMutableList()
 
             val localFunctions = klass.methods
@@ -142,7 +142,6 @@ class JvmClassReaderStage : AnalysisStage {
                 constructorVariables = constructorVariables,
                 localFunctions = localFunctions,
                 internalVariables = internalVariables.toMutableList(),
-                parent = null,
                 context = automatonContext
             )
 
@@ -165,12 +164,12 @@ class JvmClassReaderStage : AnalysisStage {
         val automatonRef = method.klass.createAutomatonReference(functionContext)
 
         val function = Function(
+            kind = FunctionKind.FUNCTION,
             name = functionName,
             automatonReference = automatonRef,
             args = methodArgs,
             returnType = returnTypeRef,
-            context = functionContext,
-
+            context = functionContext
         )
 
         automatonContext.storeFunction(function)
@@ -185,7 +184,7 @@ class JvmClassReaderStage : AnalysisStage {
                 val variableName = field.name
                 val variableType = field.type.createLslTypeReference(automatonContext)
                 val internalVariable = VariableWithInitialValue(
-                    VariableKeyword.VAL,
+                    VariableKind.VAL,
                     variableName,
                     variableType,
                     initialValue = null

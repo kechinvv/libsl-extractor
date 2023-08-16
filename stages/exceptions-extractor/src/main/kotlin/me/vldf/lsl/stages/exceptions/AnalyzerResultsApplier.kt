@@ -22,12 +22,12 @@ class AnalyzerResultsApplier(
 
         for (result in results) {
             val (function, exception, expression) = result
-            val exceptionArgumentValue = StringLiteral(exception.lslName)
+            val exceptionArgumentValue = exception.lslName
 
-            val args = listOf(exceptionArgumentValue, expression)
+            val args = listOf(NamedArgumentWithValue(exceptionArgumentValue, expression))
 
-            val annotationUsage = AnnotationUsage(throwsAnnotationReference, args)
-            function.annotationUsages.add(annotationUsage)
+            val annotationUsage = AnnotatedWith(throwsAnnotationReference, args)
+            function.annotatedWith.add(annotationUsage)
         }
     }
 

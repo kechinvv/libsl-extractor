@@ -120,12 +120,12 @@ class PredicateStateToExpressionsConverter(private val context: LslContextBase) 
         return when (term) {
             is ConstBoolTerm -> BoolLiteral(term.value)
             is ConstCharTerm -> StringLiteral(term.value.toString())
-            is ConstByteTerm -> IntegerLiteral(term.value.toInt())
-            is ConstIntTerm -> IntegerLiteral(term.value)
-            is ConstLongTerm -> IntegerLiteral(term.value.toInt())
-            is ConstShortTerm -> IntegerLiteral(term.value.toInt())
-            is ConstDoubleTerm -> FloatLiteral(term.value.toFloat())
-            is ConstFloatTerm -> FloatLiteral(term.value)
+            is ConstByteTerm -> IntegerLiteral(term.value.toInt(), null)
+            is ConstIntTerm -> IntegerLiteral(term.value, null)
+            is ConstLongTerm -> IntegerLiteral(term.value.toInt(), null)
+            is ConstShortTerm -> IntegerLiteral(term.value.toInt(), null)
+            is ConstDoubleTerm -> FloatLiteral(term.value.toFloat(), null)
+            is ConstFloatTerm -> FloatLiteral(term.value, null)
 
             is CmpTerm -> processCmpTerm(term)
 
@@ -170,14 +170,14 @@ class PredicateStateToExpressionsConverter(private val context: LslContextBase) 
         if (left is BoolLiteral) {
             return when {
                 left.value -> right
-                else -> UnaryOpExpression(right, ArithmeticUnaryOp.INVERSION)
+                else -> UnaryOpExpression(ArithmeticUnaryOp.INVERSION, right)
             }
         }
 
         if (right is BoolLiteral) {
             return when {
                 right.value -> left
-                else -> UnaryOpExpression(left, ArithmeticUnaryOp.INVERSION)
+                else -> UnaryOpExpression(ArithmeticUnaryOp.INVERSION, left)
             }
         }
 

@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.vldf:libsl:$libslVersion")
+    implementation("com.github.vpa-research:libsl-parser:$libslVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-cli:0.3.5")
 
     implementation(project(":stages:common"))
