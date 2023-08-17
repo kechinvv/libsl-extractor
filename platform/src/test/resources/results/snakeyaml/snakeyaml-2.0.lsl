@@ -1,9 +1,9 @@
 libsl "1.0.0";
 library `snakeyaml-2.0`;
 
-import "java.lsl";
+import java.lsl;
 
-type `org.yaml.snakeyaml.constructor.AbstractConstruct` {
+type org.yaml.snakeyaml.constructor.AbstractConstruct {
 }
 
 type org.yaml.snakeyaml.events.AliasEvent {
@@ -46,7 +46,7 @@ type org.yaml.snakeyaml.external.biz.base64Coder.Base64Coder {
     map2: array<byte>;
 }
 
-type `org.yaml.snakeyaml.constructor.BaseConstructor` {
+type org.yaml.snakeyaml.constructor.BaseConstructor {
     NOT_INSTANTIATED_OBJECT: java.lang.Object;
     yamlClassConstructors: java.util.Map;
     yamlConstructors: java.util.Map;
@@ -67,7 +67,7 @@ type `org.yaml.snakeyaml.constructor.BaseConstructor` {
     loadingConfig: org.yaml.snakeyaml.LoaderOptions;
 }
 
-type `org.yaml.snakeyaml.constructor.BaseConstructor$RecursiveTuple` {
+type org.yaml.snakeyaml.constructor.BaseConstructor$RecursiveTuple {
     _1: java.lang.Object;
     _2: java.lang.Object;
 }
@@ -158,7 +158,7 @@ type org.yaml.snakeyaml.extensions.compactnotation.CompactConstructor {
     GUESS_COMPACT: java.util.regex.Pattern;
     FIRST_PATTERN: java.util.regex.Pattern;
     PROPERTY_NAME_PATTERN: java.util.regex.Pattern;
-    compactConstruct: `org.yaml.snakeyaml.constructor.Construct`;
+    compactConstruct: org.yaml.snakeyaml.constructor.Construct;
 }
 
 type org.yaml.snakeyaml.extensions.compactnotation.CompactConstructor$ConstructCompactObject {
@@ -209,33 +209,33 @@ type org.yaml.snakeyaml.scanner.Constant {
     noASCII: bool;
 }
 
-type `org.yaml.snakeyaml.constructor.Construct` {
+type org.yaml.snakeyaml.constructor.Construct {
 }
 
-type `org.yaml.snakeyaml.constructor.Constructor` {
+type org.yaml.snakeyaml.constructor.Constructor {
 }
 
-type `org.yaml.snakeyaml.constructor.Constructor$ConstructMapping` {
-    this$0: `org.yaml.snakeyaml.constructor.Constructor`;
+type org.yaml.snakeyaml.constructor.Constructor$ConstructMapping {
+    this$0: org.yaml.snakeyaml.constructor.Constructor;
 }
 
-type `org.yaml.snakeyaml.constructor.Constructor$ConstructScalar` {
-    this$0: `org.yaml.snakeyaml.constructor.Constructor`;
+type org.yaml.snakeyaml.constructor.Constructor$ConstructScalar {
+    this$0: org.yaml.snakeyaml.constructor.Constructor;
 }
 
-type `org.yaml.snakeyaml.constructor.Constructor$ConstructSequence` {
-    this$0: `org.yaml.snakeyaml.constructor.Constructor`;
+type org.yaml.snakeyaml.constructor.Constructor$ConstructSequence {
+    this$0: org.yaml.snakeyaml.constructor.Constructor;
 }
 
-type `org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject` {
-    this$0: `org.yaml.snakeyaml.constructor.Constructor`;
+type org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject {
+    this$0: org.yaml.snakeyaml.constructor.Constructor;
 }
 
-type `org.yaml.snakeyaml.constructor.ConstructorException` {
+type org.yaml.snakeyaml.constructor.ConstructorException {
     serialVersionUID: long;
 }
 
-type `org.yaml.snakeyaml.constructor.CustomClassLoaderConstructor` {
+type org.yaml.snakeyaml.constructor.CustomClassLoaderConstructor {
     loader: java.lang.ClassLoader;
 }
 
@@ -314,7 +314,7 @@ enum org.yaml.snakeyaml.DumperOptions$Version {
     V1_1 = 1;
 }
 
-type `org.yaml.snakeyaml.constructor.DuplicateKeyException` {
+type org.yaml.snakeyaml.constructor.DuplicateKeyException {
 }
 
 type org.yaml.snakeyaml.emitter.Emitable {
@@ -836,66 +836,66 @@ type org.yaml.snakeyaml.resolver.ResolverTuple {
     limit: int;
 }
 
-type `org.yaml.snakeyaml.constructor.SafeConstructor` {
-    undefinedConstructor: `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructUndefined`;
+type org.yaml.snakeyaml.constructor.SafeConstructor {
+    undefinedConstructor: org.yaml.snakeyaml.constructor.SafeConstructor$ConstructUndefined;
     BOOL_VALUES: java.util.Map;
     RADIX_MAX: array<array<int>>;
     TIMESTAMP_REGEXP: java.util.regex.Pattern;
     YMD_REGEXP: java.util.regex.Pattern;
 }
 
-type `org.yaml.snakeyaml.constructor.SafeConstructor$1` {
+type org.yaml.snakeyaml.constructor.SafeConstructor$1 {
     $SwitchMap$org$yaml$snakeyaml$nodes$NodeId: array<int>;
 }
 
-type `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructUndefined` {
+type org.yaml.snakeyaml.constructor.SafeConstructor$ConstructUndefined {
 }
 
-type `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlBinary` {
-    this$0: `org.yaml.snakeyaml.constructor.SafeConstructor`;
+type org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlBinary {
+    this$0: org.yaml.snakeyaml.constructor.SafeConstructor;
 }
 
-type `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlBool` {
-    this$0: `org.yaml.snakeyaml.constructor.SafeConstructor`;
+type org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlBool {
+    this$0: org.yaml.snakeyaml.constructor.SafeConstructor;
 }
 
-type `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlFloat` {
-    this$0: `org.yaml.snakeyaml.constructor.SafeConstructor`;
+type org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlFloat {
+    this$0: org.yaml.snakeyaml.constructor.SafeConstructor;
 }
 
-type `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlInt` {
-    this$0: `org.yaml.snakeyaml.constructor.SafeConstructor`;
+type org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlInt {
+    this$0: org.yaml.snakeyaml.constructor.SafeConstructor;
 }
 
-type `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlMap` {
-    this$0: `org.yaml.snakeyaml.constructor.SafeConstructor`;
+type org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlMap {
+    this$0: org.yaml.snakeyaml.constructor.SafeConstructor;
 }
 
-type `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlNull` {
-    this$0: `org.yaml.snakeyaml.constructor.SafeConstructor`;
+type org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlNull {
+    this$0: org.yaml.snakeyaml.constructor.SafeConstructor;
 }
 
-type `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlOmap` {
-    this$0: `org.yaml.snakeyaml.constructor.SafeConstructor`;
+type org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlOmap {
+    this$0: org.yaml.snakeyaml.constructor.SafeConstructor;
 }
 
-type `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlPairs` {
-    this$0: `org.yaml.snakeyaml.constructor.SafeConstructor`;
+type org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlPairs {
+    this$0: org.yaml.snakeyaml.constructor.SafeConstructor;
 }
 
-type `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlSeq` {
-    this$0: `org.yaml.snakeyaml.constructor.SafeConstructor`;
+type org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlSeq {
+    this$0: org.yaml.snakeyaml.constructor.SafeConstructor;
 }
 
-type `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlSet` {
-    this$0: `org.yaml.snakeyaml.constructor.SafeConstructor`;
+type org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlSet {
+    this$0: org.yaml.snakeyaml.constructor.SafeConstructor;
 }
 
-type `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlStr` {
-    this$0: `org.yaml.snakeyaml.constructor.SafeConstructor`;
+type org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlStr {
+    this$0: org.yaml.snakeyaml.constructor.SafeConstructor;
 }
 
-type `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlTimestamp` {
+type org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlTimestamp {
     calendar: java.util.Calendar;
 }
 
@@ -1227,7 +1227,7 @@ type org.yaml.snakeyaml.error.YAMLException {
 type org.yaml.snakeyaml.Yaml {
     resolver: org.yaml.snakeyaml.resolver.Resolver;
     name: java.lang.String;
-    `constructor`: `org.yaml.snakeyaml.constructor.BaseConstructor`;
+    `constructor`: org.yaml.snakeyaml.constructor.BaseConstructor;
     representer: org.yaml.snakeyaml.representer.Representer;
     dumperOptions: org.yaml.snakeyaml.DumperOptions;
     loadingConfig: org.yaml.snakeyaml.LoaderOptions;
@@ -1263,17 +1263,23 @@ type org.yaml.snakeyaml.Yaml$YamlIterable {
     iterator: java.util.Iterator;
 }
 
-type `module-info` {
+type module-info {
 }
 
-automaton `org.yaml.snakeyaml.constructor.AbstractConstruct` : `org.yaml.snakeyaml.constructor.AbstractConstruct` {
+automaton org.yaml.snakeyaml.constructor.AbstractConstruct : org.yaml.snakeyaml.constructor.AbstractConstruct {
+    constructor `constructor`(): void;
+    
     fun construct2ndStep(arg0: org.yaml.snakeyaml.nodes.Node, arg1: java.lang.Object): void;
 }
 automaton org.yaml.snakeyaml.events.AliasEvent (val arg0: java.lang.String, val arg1: org.yaml.snakeyaml.error.Mark, val arg2: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.events.AliasEvent {
+    constructor `constructor`(arg0: java.lang.String, arg1: org.yaml.snakeyaml.error.Mark, arg2: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getEventId(): org.yaml.snakeyaml.events.Event$ID;
 }
 automaton org.yaml.snakeyaml.tokens.AliasToken (val arg0: java.lang.String, val arg1: org.yaml.snakeyaml.error.Mark, val arg2: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.tokens.AliasToken {
     val value: java.lang.String;
+    constructor `constructor`(arg0: java.lang.String, arg1: org.yaml.snakeyaml.error.Mark, arg2: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getTokenId(): org.yaml.snakeyaml.tokens.Token$ID;
     
     fun getValue(): java.lang.String;
@@ -1283,18 +1289,24 @@ automaton org.yaml.snakeyaml.serializer.AnchorGenerator : org.yaml.snakeyaml.ser
 }
 automaton org.yaml.snakeyaml.nodes.AnchorNode (val arg0: org.yaml.snakeyaml.nodes.Node) : org.yaml.snakeyaml.nodes.AnchorNode {
     val realNode: org.yaml.snakeyaml.nodes.Node;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.nodes.Node): void;
+    
     fun getNodeId(): org.yaml.snakeyaml.nodes.NodeId;
     
     fun getRealNode(): org.yaml.snakeyaml.nodes.Node;
 }
 automaton org.yaml.snakeyaml.tokens.AnchorToken (val arg0: java.lang.String, val arg1: org.yaml.snakeyaml.error.Mark, val arg2: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.tokens.AnchorToken {
     val value: java.lang.String;
+    constructor `constructor`(arg0: java.lang.String, arg1: org.yaml.snakeyaml.error.Mark, arg2: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getTokenId(): org.yaml.snakeyaml.tokens.Token$ID;
     
     fun getValue(): java.lang.String;
 }
 automaton org.yaml.snakeyaml.util.ArrayStack (val arg0: int) : org.yaml.snakeyaml.util.ArrayStack {
     val stack: java.util.ArrayList;
+    constructor `constructor`(arg0: int): void;
+    
     fun clear(): void;
     
     fun isEmpty(): bool;
@@ -1304,6 +1316,8 @@ automaton org.yaml.snakeyaml.util.ArrayStack (val arg0: int) : org.yaml.snakeyam
     fun push(arg0: java.lang.Object): void;
 }
 automaton org.yaml.snakeyaml.util.ArrayUtils : org.yaml.snakeyaml.util.ArrayUtils {
+    constructor `constructor`(): void;
+    
     fun toUnmodifiableCompositeList(arg0: array, arg1: array): java.util.List;
     
     fun toUnmodifiableList(arg0: array): java.util.List;
@@ -1311,12 +1325,16 @@ automaton org.yaml.snakeyaml.util.ArrayUtils : org.yaml.snakeyaml.util.ArrayUtil
 automaton org.yaml.snakeyaml.util.ArrayUtils$CompositeUnmodifiableArrayList (val arg0: array<java.lang.Object>, val arg1: array<java.lang.Object>) : org.yaml.snakeyaml.util.ArrayUtils$CompositeUnmodifiableArrayList {
     val array1: array<java.lang.Object>;
     val array2: array<java.lang.Object>;
+    constructor `constructor`(arg0: array, arg1: array): void;
+    
     fun get(arg0: int): java.lang.Object;
     
     fun size(): int;
 }
 automaton org.yaml.snakeyaml.util.ArrayUtils$UnmodifiableArrayList (val arg0: array<java.lang.Object>) : org.yaml.snakeyaml.util.ArrayUtils$UnmodifiableArrayList {
     val array: array<java.lang.Object>;
+    constructor `constructor`(arg0: array): void;
+    
     fun get(arg0: int): java.lang.Object;
     
     fun size(): int;
@@ -1325,6 +1343,8 @@ automaton org.yaml.snakeyaml.external.biz.base64Coder.Base64Coder : org.yaml.sna
     val systemLineSeparator: java.lang.String;
     val map1: array<char>;
     val map2: array<byte>;
+    constructor `constructor`(): void;
+    
     fun decode(arg0: java.lang.String): array<byte>;
     
     fun decode(arg0: array): array<byte>;
@@ -1353,7 +1373,7 @@ automaton org.yaml.snakeyaml.external.biz.base64Coder.Base64Coder : org.yaml.sna
         assigns map2;
     }
 }
-automaton `org.yaml.snakeyaml.constructor.BaseConstructor` (val arg0: org.yaml.snakeyaml.LoaderOptions) : `org.yaml.snakeyaml.constructor.BaseConstructor` {
+automaton org.yaml.snakeyaml.constructor.BaseConstructor (val arg0: org.yaml.snakeyaml.LoaderOptions) : org.yaml.snakeyaml.constructor.BaseConstructor {
     val NOT_INSTANTIATED_OBJECT: java.lang.Object;
     val yamlClassConstructors: java.util.Map;
     val yamlConstructors: java.util.Map;
@@ -1372,6 +1392,8 @@ automaton `org.yaml.snakeyaml.constructor.BaseConstructor` (val arg0: org.yaml.s
     val typeDefinitions: java.util.Map;
     val typeTags: java.util.Map;
     val loadingConfig: org.yaml.snakeyaml.LoaderOptions;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.LoaderOptions): void;
+    
     fun addTypeDescription(arg0: org.yaml.snakeyaml.TypeDescription): org.yaml.snakeyaml.TypeDescription {
         assigns propertyUtils;
         assigns arg0.propertyUtils;
@@ -1384,7 +1406,7 @@ automaton `org.yaml.snakeyaml.constructor.BaseConstructor` (val arg0: org.yaml.s
     fun constructArrayStep2(arg0: org.yaml.snakeyaml.nodes.SequenceNode, arg1: java.lang.Object): java.lang.Object;
     
     fun constructDocument(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Object {
-        assigns arg0.`type`;
+        assigns arg0.type;
         assigns arg0.twoStepsConstruction;
     }
     
@@ -1395,12 +1417,12 @@ automaton `org.yaml.snakeyaml.constructor.BaseConstructor` (val arg0: org.yaml.s
     fun constructMapping2ndStep(arg0: org.yaml.snakeyaml.nodes.MappingNode, arg1: java.util.Map): void;
     
     fun constructObject(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Object {
-        assigns arg0.`type`;
+        assigns arg0.type;
         assigns arg0.twoStepsConstruction;
     }
     
     fun constructObjectNoCheck(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Object {
-        assigns arg0.`type`;
+        assigns arg0.type;
         assigns arg0.twoStepsConstruction;
     }
     
@@ -1430,7 +1452,7 @@ automaton `org.yaml.snakeyaml.constructor.BaseConstructor` (val arg0: org.yaml.s
     
     fun finalizeConstruction(arg0: org.yaml.snakeyaml.nodes.Node, arg1: java.lang.Object): java.lang.Object;
     
-    fun getConstructor(arg0: org.yaml.snakeyaml.nodes.Node): `org.yaml.snakeyaml.constructor.Construct`;
+    fun getConstructor(arg0: org.yaml.snakeyaml.nodes.Node): org.yaml.snakeyaml.constructor.Construct;
     
     fun getData(): java.lang.Object;
     
@@ -1491,9 +1513,11 @@ automaton `org.yaml.snakeyaml.constructor.BaseConstructor` (val arg0: org.yaml.s
         assigns NOT_INSTANTIATED_OBJECT;
     }
 }
-automaton `org.yaml.snakeyaml.constructor.BaseConstructor$RecursiveTuple` (val arg0: java.lang.Object, val arg1: java.lang.Object) : `org.yaml.snakeyaml.constructor.BaseConstructor$RecursiveTuple` {
+automaton org.yaml.snakeyaml.constructor.BaseConstructor$RecursiveTuple (val arg0: java.lang.Object, val arg1: java.lang.Object) : org.yaml.snakeyaml.constructor.BaseConstructor$RecursiveTuple {
     val _1: java.lang.Object;
     val _2: java.lang.Object;
+    constructor `constructor`(arg0: java.lang.Object, arg1: java.lang.Object): void;
+    
     fun _1(): java.lang.Object;
     
     fun _2(): java.lang.Object;
@@ -1508,6 +1532,8 @@ automaton org.yaml.snakeyaml.representer.BaseRepresenter : org.yaml.snakeyaml.re
     val objectToRepresent: java.lang.Object;
     val propertyUtils: org.yaml.snakeyaml.introspector.PropertyUtils;
     val explicitPropertyUtils: bool;
+    constructor `constructor`(): void;
+    
     fun getDefaultFlowStyle(): org.yaml.snakeyaml.DumperOptions$FlowStyle;
     
     fun getDefaultScalarStyle(): org.yaml.snakeyaml.DumperOptions$ScalarStyle;
@@ -1554,6 +1580,8 @@ automaton org.yaml.snakeyaml.representer.BaseRepresenter : org.yaml.snakeyaml.re
 automaton org.yaml.snakeyaml.representer.BaseRepresenter$1 (val arg0: org.yaml.snakeyaml.representer.BaseRepresenter) : org.yaml.snakeyaml.representer.BaseRepresenter$1 {
     val serialVersionUID: long;
     val this$0: org.yaml.snakeyaml.representer.BaseRepresenter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.representer.BaseRepresenter): void;
+    
     fun put(arg0: java.lang.Object, arg1: org.yaml.snakeyaml.nodes.Node): org.yaml.snakeyaml.nodes.Node;
     
     fun put(arg0: java.lang.Object, arg1: java.lang.Object): java.lang.Object;
@@ -1563,6 +1591,8 @@ automaton org.yaml.snakeyaml.introspector.BeanAccess (val arg0: java.lang.String
     val FIELD: org.yaml.snakeyaml.introspector.BeanAccess;
     val PROPERTY: org.yaml.snakeyaml.introspector.BeanAccess;
     val $VALUES: array<org.yaml.snakeyaml.introspector.BeanAccess>;
+    constructor `constructor`(arg0: java.lang.String, arg1: int): void;
+    
     fun `static-constructor`(): void {
         assigns DEFAULT;
         assigns FIELD;
@@ -1575,21 +1605,35 @@ automaton org.yaml.snakeyaml.introspector.BeanAccess (val arg0: java.lang.String
     fun values(): array<org.yaml.snakeyaml.introspector.BeanAccess>;
 }
 automaton org.yaml.snakeyaml.tokens.BlockEndToken (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.tokens.BlockEndToken {
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getTokenId(): org.yaml.snakeyaml.tokens.Token$ID;
 }
 automaton org.yaml.snakeyaml.tokens.BlockEntryToken (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.tokens.BlockEntryToken {
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getTokenId(): org.yaml.snakeyaml.tokens.Token$ID;
 }
 automaton org.yaml.snakeyaml.tokens.BlockMappingStartToken (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.tokens.BlockMappingStartToken {
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getTokenId(): org.yaml.snakeyaml.tokens.Token$ID;
 }
 automaton org.yaml.snakeyaml.tokens.BlockSequenceStartToken (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.tokens.BlockSequenceStartToken {
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getTokenId(): org.yaml.snakeyaml.tokens.Token$ID;
 }
 automaton org.yaml.snakeyaml.events.CollectionEndEvent (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.events.CollectionEndEvent {
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark): void;
+    
 }
 automaton org.yaml.snakeyaml.nodes.CollectionNode (val arg0: org.yaml.snakeyaml.nodes.Tag, val arg1: org.yaml.snakeyaml.error.Mark, val arg2: org.yaml.snakeyaml.error.Mark, val arg3: org.yaml.snakeyaml.DumperOptions$FlowStyle) : org.yaml.snakeyaml.nodes.CollectionNode {
     val flowStyle: org.yaml.snakeyaml.DumperOptions$FlowStyle;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.nodes.Tag, arg1: org.yaml.snakeyaml.error.Mark, arg2: org.yaml.snakeyaml.error.Mark, arg3: org.yaml.snakeyaml.DumperOptions$FlowStyle): void {
+        assigns flowStyle;
+    }
+    
     fun getFlowStyle(): org.yaml.snakeyaml.DumperOptions$FlowStyle;
     
     fun getValue(): java.util.List;
@@ -1604,6 +1648,8 @@ automaton org.yaml.snakeyaml.events.CollectionStartEvent (val arg0: java.lang.St
     val tag: java.lang.String;
     val implicit: bool;
     val flowStyle: org.yaml.snakeyaml.DumperOptions$FlowStyle;
+    constructor `constructor`(arg0: java.lang.String, arg1: java.lang.String, arg2: bool, arg3: org.yaml.snakeyaml.error.Mark, arg4: org.yaml.snakeyaml.error.Mark, arg5: org.yaml.snakeyaml.DumperOptions$FlowStyle): void;
+    
     fun getArguments(): java.lang.String;
     
     fun getFlowStyle(): org.yaml.snakeyaml.DumperOptions$FlowStyle;
@@ -1617,6 +1663,8 @@ automaton org.yaml.snakeyaml.events.CollectionStartEvent (val arg0: java.lang.St
 automaton org.yaml.snakeyaml.events.CommentEvent (val arg0: org.yaml.snakeyaml.comments.CommentType, val arg1: java.lang.String, val arg2: org.yaml.snakeyaml.error.Mark, val arg3: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.events.CommentEvent {
     val `type`: org.yaml.snakeyaml.comments.CommentType;
     val value: java.lang.String;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.comments.CommentType, arg1: java.lang.String, arg2: org.yaml.snakeyaml.error.Mark, arg3: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getArguments(): java.lang.String;
     
     fun getCommentType(): org.yaml.snakeyaml.comments.CommentType;
@@ -1629,6 +1677,10 @@ automaton org.yaml.snakeyaml.comments.CommentEventsCollector (val arg0: org.yaml
     val commentLineList: java.util.List;
     val eventSource: java.util.Queue;
     val expectedCommentTypes: array<org.yaml.snakeyaml.comments.CommentType>;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.Parser, arg1: array): void;
+    
+    constructor `constructor`(arg0: java.util.Queue, arg1: array): void;
+    
     fun collectEvents(): org.yaml.snakeyaml.comments.CommentEventsCollector;
     
     fun collectEvents(arg0: org.yaml.snakeyaml.events.Event): org.yaml.snakeyaml.events.Event;
@@ -1646,6 +1698,8 @@ automaton org.yaml.snakeyaml.comments.CommentEventsCollector (val arg0: org.yaml
 automaton org.yaml.snakeyaml.comments.CommentEventsCollector$1 (val arg0: org.yaml.snakeyaml.comments.CommentEventsCollector, val arg1: org.yaml.snakeyaml.parser.Parser) : org.yaml.snakeyaml.comments.CommentEventsCollector$1 {
     val val$parser: org.yaml.snakeyaml.parser.Parser;
     val this$0: org.yaml.snakeyaml.comments.CommentEventsCollector;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.comments.CommentEventsCollector, arg1: org.yaml.snakeyaml.parser.Parser): void;
+    
     fun iterator(): java.util.Iterator;
     
     fun offer(arg0: org.yaml.snakeyaml.events.Event): bool;
@@ -1667,6 +1721,10 @@ automaton org.yaml.snakeyaml.comments.CommentLine (val arg0: org.yaml.snakeyaml.
     val endMark: org.yaml.snakeyaml.error.Mark;
     val value: java.lang.String;
     val commentType: org.yaml.snakeyaml.comments.CommentType;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.events.CommentEvent): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark, arg2: java.lang.String, arg3: org.yaml.snakeyaml.comments.CommentType): void;
+    
     fun getCommentType(): org.yaml.snakeyaml.comments.CommentType;
     
     fun getEndMark(): org.yaml.snakeyaml.error.Mark;
@@ -1680,6 +1738,8 @@ automaton org.yaml.snakeyaml.comments.CommentLine (val arg0: org.yaml.snakeyaml.
 automaton org.yaml.snakeyaml.tokens.CommentToken (val arg0: org.yaml.snakeyaml.comments.CommentType, val arg1: java.lang.String, val arg2: org.yaml.snakeyaml.error.Mark, val arg3: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.tokens.CommentToken {
     val `type`: org.yaml.snakeyaml.comments.CommentType;
     val value: java.lang.String;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.comments.CommentType, arg1: java.lang.String, arg2: org.yaml.snakeyaml.error.Mark, arg3: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getCommentType(): org.yaml.snakeyaml.comments.CommentType;
     
     fun getTokenId(): org.yaml.snakeyaml.tokens.Token$ID;
@@ -1691,6 +1751,8 @@ automaton org.yaml.snakeyaml.comments.CommentType (val arg0: java.lang.String, v
     val BLOCK: org.yaml.snakeyaml.comments.CommentType;
     val IN_LINE: org.yaml.snakeyaml.comments.CommentType;
     val $VALUES: array<org.yaml.snakeyaml.comments.CommentType>;
+    constructor `constructor`(arg0: java.lang.String, arg1: int): void;
+    
     fun `static-constructor`(): void {
         assigns BLANK_LINE;
         assigns BLOCK;
@@ -1706,7 +1768,11 @@ automaton org.yaml.snakeyaml.extensions.compactnotation.CompactConstructor (val 
     val GUESS_COMPACT: java.util.regex.Pattern;
     val FIRST_PATTERN: java.util.regex.Pattern;
     val PROPERTY_NAME_PATTERN: java.util.regex.Pattern;
-    val compactConstruct: `org.yaml.snakeyaml.constructor.Construct`;
+    val compactConstruct: org.yaml.snakeyaml.constructor.Construct;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.LoaderOptions): void;
+    
+    constructor `constructor`(): void;
+    
     fun access$000(arg0: org.yaml.snakeyaml.extensions.compactnotation.CompactConstructor, arg1: org.yaml.snakeyaml.nodes.SequenceNode): java.util.List;
     
     fun access$100(arg0: org.yaml.snakeyaml.extensions.compactnotation.CompactConstructor, arg1: org.yaml.snakeyaml.nodes.ScalarNode): java.lang.String;
@@ -1715,17 +1781,17 @@ automaton org.yaml.snakeyaml.extensions.compactnotation.CompactConstructor (val 
     
     fun constructCompactFormat(arg0: org.yaml.snakeyaml.nodes.ScalarNode, arg1: org.yaml.snakeyaml.extensions.compactnotation.CompactData): java.lang.Object;
     
-    fun createCompactConstruct(): `org.yaml.snakeyaml.constructor.Construct`;
+    fun createCompactConstruct(): org.yaml.snakeyaml.constructor.Construct;
     
     fun createInstance(arg0: org.yaml.snakeyaml.nodes.ScalarNode, arg1: org.yaml.snakeyaml.extensions.compactnotation.CompactData): java.lang.Object;
     
-    fun getCompactConstruct(): `org.yaml.snakeyaml.constructor.Construct` {
+    fun getCompactConstruct(): org.yaml.snakeyaml.constructor.Construct {
         assigns compactConstruct;
     }
     
     fun getCompactData(arg0: java.lang.String): org.yaml.snakeyaml.extensions.compactnotation.CompactData;
     
-    fun getConstructor(arg0: org.yaml.snakeyaml.nodes.Node): `org.yaml.snakeyaml.constructor.Construct` {
+    fun getConstructor(arg0: org.yaml.snakeyaml.nodes.Node): org.yaml.snakeyaml.constructor.Construct {
         assigns compactConstruct;
     }
     
@@ -1741,6 +1807,8 @@ automaton org.yaml.snakeyaml.extensions.compactnotation.CompactConstructor (val 
 }
 automaton org.yaml.snakeyaml.extensions.compactnotation.CompactConstructor$ConstructCompactObject (val arg0: org.yaml.snakeyaml.extensions.compactnotation.CompactConstructor) : org.yaml.snakeyaml.extensions.compactnotation.CompactConstructor$ConstructCompactObject {
     val this$0: org.yaml.snakeyaml.extensions.compactnotation.CompactConstructor;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.extensions.compactnotation.CompactConstructor): void;
+    
     fun construct(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Object {
         assigns arg0.twoStepsConstruction;
     }
@@ -1751,6 +1819,8 @@ automaton org.yaml.snakeyaml.extensions.compactnotation.CompactData (val arg0: j
     val prefix: java.lang.String;
     val arguments: java.util.List;
     val properties: java.util.Map;
+    constructor `constructor`(arg0: java.lang.String): void;
+    
     fun getArguments(): java.util.List;
     
     fun getPrefix(): java.lang.String;
@@ -1770,6 +1840,8 @@ automaton org.yaml.snakeyaml.composer.Composer (val arg0: org.yaml.snakeyaml.par
     val inlineCommentsCollector: org.yaml.snakeyaml.comments.CommentEventsCollector;
     val nestingDepth: int;
     val nestingDepthLimit: int;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.Parser, arg1: org.yaml.snakeyaml.resolver.Resolver, arg2: org.yaml.snakeyaml.LoaderOptions): void;
+    
     fun checkNode(): bool;
     
     fun composeKeyNode(arg0: org.yaml.snakeyaml.nodes.MappingNode): org.yaml.snakeyaml.nodes.Node {
@@ -1825,6 +1897,8 @@ automaton org.yaml.snakeyaml.composer.Composer (val arg0: org.yaml.snakeyaml.par
 }
 automaton org.yaml.snakeyaml.composer.ComposerException (val arg0: java.lang.String, val arg1: org.yaml.snakeyaml.error.Mark, val arg2: java.lang.String, val arg3: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.composer.ComposerException {
     val serialVersionUID: long;
+    constructor `constructor`(arg0: java.lang.String, arg1: org.yaml.snakeyaml.error.Mark, arg2: java.lang.String, arg3: org.yaml.snakeyaml.error.Mark): void;
+    
 }
 automaton org.yaml.snakeyaml.scanner.Constant (val arg0: java.lang.String) : org.yaml.snakeyaml.scanner.Constant {
     val ALPHA_S: java.lang.String;
@@ -1845,9 +1919,11 @@ automaton org.yaml.snakeyaml.scanner.Constant (val arg0: java.lang.String) : org
     val content: java.lang.String;
     val contains: array<bool>;
     val noASCII: bool;
-    fun has(arg0: int): bool;
+    constructor `constructor`(arg0: java.lang.String): void;
     
-    fun has(arg0: int, arg1: java.lang.String): bool;
+    fun `has`(arg0: int): bool;
+    
+    fun `has`(arg0: int, arg1: java.lang.String): bool;
     
     fun hasNo(arg0: int): bool;
     
@@ -1863,12 +1939,22 @@ automaton org.yaml.snakeyaml.scanner.Constant (val arg0: java.lang.String) : org
         assigns ALPHA;
     }
 }
-automaton `org.yaml.snakeyaml.constructor.Construct` : `org.yaml.snakeyaml.constructor.Construct` {
+automaton org.yaml.snakeyaml.constructor.Construct : org.yaml.snakeyaml.constructor.Construct {
     fun construct(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Object;
     
     fun construct2ndStep(arg0: org.yaml.snakeyaml.nodes.Node, arg1: java.lang.Object): void;
 }
-automaton `org.yaml.snakeyaml.constructor.Constructor` (val arg0: org.yaml.snakeyaml.LoaderOptions) : `org.yaml.snakeyaml.constructor.Constructor` {
+automaton org.yaml.snakeyaml.constructor.Constructor (val arg0: org.yaml.snakeyaml.LoaderOptions) : org.yaml.snakeyaml.constructor.Constructor {
+    constructor `constructor`(arg0: org.yaml.snakeyaml.LoaderOptions): void;
+    
+    constructor `constructor`(arg0: java.lang.Class, arg1: org.yaml.snakeyaml.LoaderOptions): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.TypeDescription, arg1: org.yaml.snakeyaml.LoaderOptions): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.TypeDescription, arg1: java.util.Collection, arg2: org.yaml.snakeyaml.LoaderOptions): void;
+    
+    constructor `constructor`(arg0: java.lang.String, arg1: org.yaml.snakeyaml.LoaderOptions): void;
+    
     fun check(arg0: java.lang.String): java.lang.String;
     
     fun checkRoot(arg0: java.lang.Class): java.lang.Class;
@@ -1877,8 +1963,10 @@ automaton `org.yaml.snakeyaml.constructor.Constructor` (val arg0: org.yaml.snake
     
     fun getClassForNode(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Class;
 }
-automaton `org.yaml.snakeyaml.constructor.Constructor$ConstructMapping` (val arg0: `org.yaml.snakeyaml.constructor.Constructor`) : `org.yaml.snakeyaml.constructor.Constructor$ConstructMapping` {
-    val this$0: `org.yaml.snakeyaml.constructor.Constructor`;
+automaton org.yaml.snakeyaml.constructor.Constructor$ConstructMapping (val arg0: org.yaml.snakeyaml.constructor.Constructor) : org.yaml.snakeyaml.constructor.Constructor$ConstructMapping {
+    val this$0: org.yaml.snakeyaml.constructor.Constructor;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.constructor.Constructor): void;
+    
     fun construct(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Object;
     
     fun construct2ndStep(arg0: org.yaml.snakeyaml.nodes.Node, arg1: java.lang.Object): void;
@@ -1890,51 +1978,67 @@ automaton `org.yaml.snakeyaml.constructor.Constructor$ConstructMapping` (val arg
     fun getProperty(arg0: java.lang.Class, arg1: java.lang.String): org.yaml.snakeyaml.introspector.Property;
     
     fun newInstance(arg0: org.yaml.snakeyaml.TypeDescription, arg1: java.lang.String, arg2: org.yaml.snakeyaml.nodes.Node): java.lang.Object {
-        assigns arg2.`type`;
+        assigns arg2.type;
         assigns arg2.twoStepsConstruction;
     }
 }
-automaton `org.yaml.snakeyaml.constructor.Constructor$ConstructScalar` (val arg0: `org.yaml.snakeyaml.constructor.Constructor`) : `org.yaml.snakeyaml.constructor.Constructor$ConstructScalar` {
-    val this$0: `org.yaml.snakeyaml.constructor.Constructor`;
+automaton org.yaml.snakeyaml.constructor.Constructor$ConstructScalar (val arg0: org.yaml.snakeyaml.constructor.Constructor) : org.yaml.snakeyaml.constructor.Constructor$ConstructScalar {
+    val this$0: org.yaml.snakeyaml.constructor.Constructor;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.constructor.Constructor): void;
+    
     fun construct(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Object;
     
     fun constructStandardJavaInstance(arg0: java.lang.Class, arg1: org.yaml.snakeyaml.nodes.ScalarNode): java.lang.Object {
         assigns arg1;
     }
 }
-automaton `org.yaml.snakeyaml.constructor.Constructor$ConstructSequence` (val arg0: `org.yaml.snakeyaml.constructor.Constructor`) : `org.yaml.snakeyaml.constructor.Constructor$ConstructSequence` {
-    val this$0: `org.yaml.snakeyaml.constructor.Constructor`;
+automaton org.yaml.snakeyaml.constructor.Constructor$ConstructSequence (val arg0: org.yaml.snakeyaml.constructor.Constructor) : org.yaml.snakeyaml.constructor.Constructor$ConstructSequence {
+    val this$0: org.yaml.snakeyaml.constructor.Constructor;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.constructor.Constructor): void;
+    
     fun construct(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Object;
     
     fun construct2ndStep(arg0: org.yaml.snakeyaml.nodes.Node, arg1: java.lang.Object): void;
     
     fun wrapIfPrimitive(arg0: java.lang.Class): java.lang.Class;
 }
-automaton `org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject` (val arg0: `org.yaml.snakeyaml.constructor.Constructor`) : `org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject` {
-    val this$0: `org.yaml.snakeyaml.constructor.Constructor`;
+automaton org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject (val arg0: org.yaml.snakeyaml.constructor.Constructor) : org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject {
+    val this$0: org.yaml.snakeyaml.constructor.Constructor;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.constructor.Constructor): void;
+    
     fun construct(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Object {
-        assigns arg0.`type`;
+        assigns arg0.type;
         assigns arg0.twoStepsConstruction;
     }
     
     fun construct2ndStep(arg0: org.yaml.snakeyaml.nodes.Node, arg1: java.lang.Object): void {
-        assigns arg0.`type`;
+        assigns arg0.type;
     }
     
-    fun getConstructor(arg0: org.yaml.snakeyaml.nodes.Node): `org.yaml.snakeyaml.constructor.Construct` {
-        assigns arg0.`type`;
+    fun getConstructor(arg0: org.yaml.snakeyaml.nodes.Node): org.yaml.snakeyaml.constructor.Construct {
+        assigns arg0.type;
     }
 }
-automaton `org.yaml.snakeyaml.constructor.ConstructorException` (val arg0: java.lang.String, val arg1: org.yaml.snakeyaml.error.Mark, val arg2: java.lang.String, val arg3: org.yaml.snakeyaml.error.Mark, val arg4: java.lang.Throwable) : `org.yaml.snakeyaml.constructor.ConstructorException` {
+automaton org.yaml.snakeyaml.constructor.ConstructorException (val arg0: java.lang.String, val arg1: org.yaml.snakeyaml.error.Mark, val arg2: java.lang.String, val arg3: org.yaml.snakeyaml.error.Mark, val arg4: java.lang.Throwable) : org.yaml.snakeyaml.constructor.ConstructorException {
     val serialVersionUID: long;
+    constructor `constructor`(arg0: java.lang.String, arg1: org.yaml.snakeyaml.error.Mark, arg2: java.lang.String, arg3: org.yaml.snakeyaml.error.Mark, arg4: java.lang.Throwable): void;
+    
+    constructor `constructor`(arg0: java.lang.String, arg1: org.yaml.snakeyaml.error.Mark, arg2: java.lang.String, arg3: org.yaml.snakeyaml.error.Mark): void;
+    
 }
-automaton `org.yaml.snakeyaml.constructor.CustomClassLoaderConstructor` (val arg0: java.lang.ClassLoader, val arg1: org.yaml.snakeyaml.LoaderOptions) : `org.yaml.snakeyaml.constructor.CustomClassLoaderConstructor` {
+automaton org.yaml.snakeyaml.constructor.CustomClassLoaderConstructor (val arg0: java.lang.ClassLoader, val arg1: org.yaml.snakeyaml.LoaderOptions) : org.yaml.snakeyaml.constructor.CustomClassLoaderConstructor {
     val loader: java.lang.ClassLoader;
+    constructor `constructor`(arg0: java.lang.ClassLoader, arg1: org.yaml.snakeyaml.LoaderOptions): void;
+    
+    constructor `constructor`(arg0: java.lang.Class, arg1: java.lang.ClassLoader, arg2: org.yaml.snakeyaml.LoaderOptions): void;
+    
     fun getClassForName(arg0: java.lang.String): java.lang.Class;
 }
 automaton org.yaml.snakeyaml.tokens.DirectiveToken (val arg0: java.lang.String, val arg1: java.util.List, val arg2: org.yaml.snakeyaml.error.Mark, val arg3: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.tokens.DirectiveToken {
     val name: java.lang.String;
     val value: java.util.List;
+    constructor `constructor`(arg0: java.lang.String, arg1: java.util.List, arg2: org.yaml.snakeyaml.error.Mark, arg3: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getName(): java.lang.String;
     
     fun getTokenId(): org.yaml.snakeyaml.tokens.Token$ID;
@@ -1943,17 +2047,23 @@ automaton org.yaml.snakeyaml.tokens.DirectiveToken (val arg0: java.lang.String, 
 }
 automaton org.yaml.snakeyaml.events.DocumentEndEvent (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark, val arg2: bool) : org.yaml.snakeyaml.events.DocumentEndEvent {
     val explicit: bool;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark, arg2: bool): void;
+    
     fun getEventId(): org.yaml.snakeyaml.events.Event$ID;
     
     fun getExplicit(): bool;
 }
 automaton org.yaml.snakeyaml.tokens.DocumentEndToken (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.tokens.DocumentEndToken {
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getTokenId(): org.yaml.snakeyaml.tokens.Token$ID;
 }
 automaton org.yaml.snakeyaml.events.DocumentStartEvent (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark, val arg2: bool, val arg3: org.yaml.snakeyaml.DumperOptions$Version, val arg4: java.util.Map) : org.yaml.snakeyaml.events.DocumentStartEvent {
     val explicit: bool;
     val `version`: org.yaml.snakeyaml.DumperOptions$Version;
     val tags: java.util.Map;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark, arg2: bool, arg3: org.yaml.snakeyaml.DumperOptions$Version, arg4: java.util.Map): void;
+    
     fun getEventId(): org.yaml.snakeyaml.events.Event$ID;
     
     fun getExplicit(): bool;
@@ -1963,6 +2073,8 @@ automaton org.yaml.snakeyaml.events.DocumentStartEvent (val arg0: org.yaml.snake
     fun getVersion(): org.yaml.snakeyaml.DumperOptions$Version;
 }
 automaton org.yaml.snakeyaml.tokens.DocumentStartToken (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.tokens.DocumentStartToken {
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getTokenId(): org.yaml.snakeyaml.tokens.Token$ID;
 }
 automaton org.yaml.snakeyaml.DumperOptions : org.yaml.snakeyaml.DumperOptions {
@@ -1987,6 +2099,8 @@ automaton org.yaml.snakeyaml.DumperOptions : org.yaml.snakeyaml.DumperOptions {
     val tags: java.util.Map;
     val prettyFlow: bool;
     val anchorGenerator: org.yaml.snakeyaml.serializer.AnchorGenerator;
+    constructor `constructor`(): void;
+    
     fun getAnchorGenerator(): org.yaml.snakeyaml.serializer.AnchorGenerator;
     
     fun getDefaultFlowStyle(): org.yaml.snakeyaml.DumperOptions$FlowStyle;
@@ -2106,7 +2220,7 @@ automaton org.yaml.snakeyaml.DumperOptions : org.yaml.snakeyaml.DumperOptions {
     }
     
     fun setVersion(arg0: org.yaml.snakeyaml.DumperOptions$Version): void {
-        assigns `version`;
+        assigns version;
     }
     
     fun setWidth(arg0: int): void {
@@ -2119,6 +2233,8 @@ automaton org.yaml.snakeyaml.DumperOptions$FlowStyle (val arg0: java.lang.String
     val AUTO: org.yaml.snakeyaml.DumperOptions$FlowStyle;
     val styleBoolean: bool;
     val $VALUES: array<org.yaml.snakeyaml.DumperOptions$FlowStyle>;
+    constructor `constructor`(arg0: java.lang.String, arg1: int, arg2: bool): void;
+    
     fun `static-constructor`(): void {
         assigns FLOW;
         assigns BLOCK;
@@ -2138,6 +2254,8 @@ automaton org.yaml.snakeyaml.DumperOptions$LineBreak (val arg0: java.lang.String
     val UNIX: org.yaml.snakeyaml.DumperOptions$LineBreak;
     val lineBreak: java.lang.String;
     val $VALUES: array<org.yaml.snakeyaml.DumperOptions$LineBreak>;
+    constructor `constructor`(arg0: java.lang.String, arg1: int, arg2: java.lang.String): void;
+    
     fun getPlatformLineBreak(): org.yaml.snakeyaml.DumperOptions$LineBreak;
     
     fun getString(): java.lang.String;
@@ -2159,6 +2277,8 @@ automaton org.yaml.snakeyaml.DumperOptions$NonPrintableStyle (val arg0: java.lan
     val BINARY: org.yaml.snakeyaml.DumperOptions$NonPrintableStyle;
     val ESCAPE: org.yaml.snakeyaml.DumperOptions$NonPrintableStyle;
     val $VALUES: array<org.yaml.snakeyaml.DumperOptions$NonPrintableStyle>;
+    constructor `constructor`(arg0: java.lang.String, arg1: int): void;
+    
     fun `static-constructor`(): void {
         assigns BINARY;
         assigns ESCAPE;
@@ -2177,6 +2297,8 @@ automaton org.yaml.snakeyaml.DumperOptions$ScalarStyle (val arg0: java.lang.Stri
     val PLAIN: org.yaml.snakeyaml.DumperOptions$ScalarStyle;
     val styleChar: char;
     val $VALUES: array<org.yaml.snakeyaml.DumperOptions$ScalarStyle>;
+    constructor `constructor`(arg0: java.lang.String, arg1: int, arg2: char): void;
+    
     fun createStyle(arg0: char): org.yaml.snakeyaml.DumperOptions$ScalarStyle;
     
     fun getChar(): char;
@@ -2201,6 +2323,8 @@ automaton org.yaml.snakeyaml.DumperOptions$Version (val arg0: java.lang.String, 
     val V1_1: org.yaml.snakeyaml.DumperOptions$Version;
     val `version`: array<int>;
     val $VALUES: array<org.yaml.snakeyaml.DumperOptions$Version>;
+    constructor `constructor`(arg0: java.lang.String, arg1: int, arg2: array): void;
+    
     fun getRepresentation(): java.lang.String;
     
     fun major(): int;
@@ -2219,7 +2343,9 @@ automaton org.yaml.snakeyaml.DumperOptions$Version (val arg0: java.lang.String, 
     
     fun values(): array<org.yaml.snakeyaml.DumperOptions$Version>;
 }
-automaton `org.yaml.snakeyaml.constructor.DuplicateKeyException` (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: java.lang.Object, val arg2: org.yaml.snakeyaml.error.Mark) : `org.yaml.snakeyaml.constructor.DuplicateKeyException` {
+automaton org.yaml.snakeyaml.constructor.DuplicateKeyException (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: java.lang.Object, val arg2: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.constructor.DuplicateKeyException {
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: java.lang.Object, arg2: org.yaml.snakeyaml.error.Mark): void;
+    
 }
 automaton org.yaml.snakeyaml.emitter.Emitable : org.yaml.snakeyaml.emitter.Emitable {
     fun emit(arg0: org.yaml.snakeyaml.events.Event): void;
@@ -2267,6 +2393,8 @@ automaton org.yaml.snakeyaml.emitter.Emitter (val arg0: java.io.Writer, val arg1
     val inlineCommentsCollector: org.yaml.snakeyaml.comments.CommentEventsCollector;
     val HANDLE_FORMAT: java.util.regex.Pattern;
     val LEADING_ZERO_PATTERN: java.util.regex.Pattern;
+    constructor `constructor`(arg0: java.io.Writer, arg1: org.yaml.snakeyaml.DumperOptions): void;
+    
     fun access$100(arg0: org.yaml.snakeyaml.emitter.Emitter): org.yaml.snakeyaml.events.Event;
     
     fun access$1000(arg0: org.yaml.snakeyaml.emitter.Emitter): bool;
@@ -2292,7 +2420,7 @@ automaton org.yaml.snakeyaml.emitter.Emitter (val arg0: java.io.Writer, val arg1
         assigns arg0.rootContext;
         assigns arg0.mappingContext;
         assigns arg0.simpleKeyContext;
-        assigns arg0.`state`;
+        assigns arg0.state;
         assigns arg0.preparedAnchor;
         assigns arg0.column;
         assigns arg0.whitespace;
@@ -2312,7 +2440,7 @@ automaton org.yaml.snakeyaml.emitter.Emitter (val arg0: java.io.Writer, val arg1
     }
     
     fun access$202(arg0: org.yaml.snakeyaml.emitter.Emitter, arg1: org.yaml.snakeyaml.emitter.EmitterState): org.yaml.snakeyaml.emitter.EmitterState {
-        assigns arg0.`state`;
+        assigns arg0.state;
     }
     
     fun access$2100(arg0: org.yaml.snakeyaml.emitter.Emitter): org.yaml.snakeyaml.util.ArrayStack;
@@ -2408,7 +2536,7 @@ automaton org.yaml.snakeyaml.emitter.Emitter (val arg0: java.io.Writer, val arg1
     }
     
     fun expectAlias(): void {
-        assigns `state`;
+        assigns state;
         assigns preparedAnchor;
         assigns column;
         assigns whitespace;
@@ -2417,18 +2545,18 @@ automaton org.yaml.snakeyaml.emitter.Emitter (val arg0: java.io.Writer, val arg1
     }
     
     fun expectBlockMapping(): void {
-        assigns `state`;
+        assigns state;
         assigns indent;
     }
     
     fun expectBlockSequence(): void {
-        assigns `state`;
+        assigns state;
         assigns indent;
     }
     
     fun expectFlowMapping(): void {
         assigns flowLevel;
-        assigns `state`;
+        assigns state;
         assigns column;
         assigns whitespace;
         assigns indention;
@@ -2438,7 +2566,7 @@ automaton org.yaml.snakeyaml.emitter.Emitter (val arg0: java.io.Writer, val arg1
     
     fun expectFlowSequence(): void {
         assigns flowLevel;
-        assigns `state`;
+        assigns state;
         assigns column;
         assigns whitespace;
         assigns indention;
@@ -2450,7 +2578,7 @@ automaton org.yaml.snakeyaml.emitter.Emitter (val arg0: java.io.Writer, val arg1
         assigns rootContext;
         assigns mappingContext;
         assigns simpleKeyContext;
-        assigns `state`;
+        assigns state;
         assigns preparedAnchor;
         assigns column;
         assigns whitespace;
@@ -2465,7 +2593,7 @@ automaton org.yaml.snakeyaml.emitter.Emitter (val arg0: java.io.Writer, val arg1
     
     fun expectScalar(): void {
         assigns indent;
-        assigns `state`;
+        assigns state;
         assigns analysis;
         assigns style;
         assigns openEnded;
@@ -2638,6 +2766,8 @@ automaton org.yaml.snakeyaml.emitter.Emitter$1 : org.yaml.snakeyaml.emitter.Emit
 automaton org.yaml.snakeyaml.emitter.Emitter$ExpectBlockMappingKey (val arg0: org.yaml.snakeyaml.emitter.Emitter, val arg1: bool) : org.yaml.snakeyaml.emitter.Emitter$ExpectBlockMappingKey {
     val first: bool;
     val this$0: org.yaml.snakeyaml.emitter.Emitter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter, arg1: bool): void;
+    
     fun expect(): void {
         assigns this$0.event;
         assigns this$0.whitespace;
@@ -2645,7 +2775,7 @@ automaton org.yaml.snakeyaml.emitter.Emitter$ExpectBlockMappingKey (val arg0: or
         assigns this$0.column;
         assigns this$0.openEnded;
         assigns this$0.indent;
-        assigns this$0.`state`;
+        assigns this$0.state;
         assigns this$0.preparedAnchor;
         assigns this$0.preparedTag;
         assigns this$0.analysis;
@@ -2658,6 +2788,10 @@ automaton org.yaml.snakeyaml.emitter.Emitter$ExpectBlockMappingKey (val arg0: or
 }
 automaton org.yaml.snakeyaml.emitter.Emitter$ExpectBlockMappingSimpleValue (val arg0: org.yaml.snakeyaml.emitter.Emitter) : org.yaml.snakeyaml.emitter.Emitter$ExpectBlockMappingSimpleValue {
     val this$0: org.yaml.snakeyaml.emitter.Emitter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter, arg1: org.yaml.snakeyaml.emitter.Emitter$1): void;
+    
     fun expect(): void {
         assigns this$0.event;
         assigns this$0.column;
@@ -2668,7 +2802,7 @@ automaton org.yaml.snakeyaml.emitter.Emitter$ExpectBlockMappingSimpleValue (val 
         assigns this$0.rootContext;
         assigns this$0.mappingContext;
         assigns this$0.simpleKeyContext;
-        assigns this$0.`state`;
+        assigns this$0.state;
         assigns this$0.preparedAnchor;
         assigns this$0.style;
         assigns this$0.preparedTag;
@@ -2678,6 +2812,10 @@ automaton org.yaml.snakeyaml.emitter.Emitter$ExpectBlockMappingSimpleValue (val 
 }
 automaton org.yaml.snakeyaml.emitter.Emitter$ExpectBlockMappingValue (val arg0: org.yaml.snakeyaml.emitter.Emitter) : org.yaml.snakeyaml.emitter.Emitter$ExpectBlockMappingValue {
     val this$0: org.yaml.snakeyaml.emitter.Emitter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter, arg1: org.yaml.snakeyaml.emitter.Emitter$1): void;
+    
     fun expect(): void {
         assigns this$0.event;
         assigns this$0.column;
@@ -2687,7 +2825,7 @@ automaton org.yaml.snakeyaml.emitter.Emitter$ExpectBlockMappingValue (val arg0: 
         assigns this$0.rootContext;
         assigns this$0.mappingContext;
         assigns this$0.simpleKeyContext;
-        assigns this$0.`state`;
+        assigns this$0.state;
         assigns this$0.preparedAnchor;
         assigns this$0.style;
         assigns this$0.preparedTag;
@@ -2699,9 +2837,11 @@ automaton org.yaml.snakeyaml.emitter.Emitter$ExpectBlockMappingValue (val arg0: 
 automaton org.yaml.snakeyaml.emitter.Emitter$ExpectBlockSequenceItem (val arg0: org.yaml.snakeyaml.emitter.Emitter, val arg1: bool) : org.yaml.snakeyaml.emitter.Emitter$ExpectBlockSequenceItem {
     val first: bool;
     val this$0: org.yaml.snakeyaml.emitter.Emitter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter, arg1: bool): void;
+    
     fun expect(): void {
         assigns this$0.indent;
-        assigns this$0.`state`;
+        assigns this$0.state;
         assigns this$0.whitespace;
         assigns this$0.column;
         assigns this$0.indention;
@@ -2718,17 +2858,25 @@ automaton org.yaml.snakeyaml.emitter.Emitter$ExpectBlockSequenceItem (val arg0: 
 }
 automaton org.yaml.snakeyaml.emitter.Emitter$ExpectDocumentEnd (val arg0: org.yaml.snakeyaml.emitter.Emitter) : org.yaml.snakeyaml.emitter.Emitter$ExpectDocumentEnd {
     val this$0: org.yaml.snakeyaml.emitter.Emitter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter, arg1: org.yaml.snakeyaml.emitter.Emitter$1): void;
+    
     fun expect(): void {
         assigns this$0.event;
         assigns this$0.whitespace;
         assigns this$0.indention;
         assigns this$0.column;
         assigns this$0.openEnded;
-        assigns this$0.`state`;
+        assigns this$0.state;
     }
 }
 automaton org.yaml.snakeyaml.emitter.Emitter$ExpectDocumentRoot (val arg0: org.yaml.snakeyaml.emitter.Emitter) : org.yaml.snakeyaml.emitter.Emitter$ExpectDocumentRoot {
     val this$0: org.yaml.snakeyaml.emitter.Emitter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter, arg1: org.yaml.snakeyaml.emitter.Emitter$1): void;
+    
     fun expect(): void {
         assigns this$0.event;
         assigns this$0.whitespace;
@@ -2738,7 +2886,7 @@ automaton org.yaml.snakeyaml.emitter.Emitter$ExpectDocumentRoot (val arg0: org.y
         assigns this$0.rootContext;
         assigns this$0.mappingContext;
         assigns this$0.simpleKeyContext;
-        assigns this$0.`state`;
+        assigns this$0.state;
         assigns this$0.preparedAnchor;
         assigns this$0.style;
         assigns this$0.preparedTag;
@@ -2750,9 +2898,11 @@ automaton org.yaml.snakeyaml.emitter.Emitter$ExpectDocumentRoot (val arg0: org.y
 automaton org.yaml.snakeyaml.emitter.Emitter$ExpectDocumentStart (val arg0: org.yaml.snakeyaml.emitter.Emitter, val arg1: bool) : org.yaml.snakeyaml.emitter.Emitter$ExpectDocumentStart {
     val first: bool;
     val this$0: org.yaml.snakeyaml.emitter.Emitter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter, arg1: bool): void;
+    
     fun expect(): void {
         assigns this$0.tagPrefixes;
-        assigns this$0.`state`;
+        assigns this$0.state;
         assigns this$0.whitespace;
         assigns this$0.indention;
         assigns this$0.column;
@@ -2761,18 +2911,34 @@ automaton org.yaml.snakeyaml.emitter.Emitter$ExpectDocumentStart (val arg0: org.
 }
 automaton org.yaml.snakeyaml.emitter.Emitter$ExpectFirstBlockMappingKey (val arg0: org.yaml.snakeyaml.emitter.Emitter) : org.yaml.snakeyaml.emitter.Emitter$ExpectFirstBlockMappingKey {
     val this$0: org.yaml.snakeyaml.emitter.Emitter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter, arg1: org.yaml.snakeyaml.emitter.Emitter$1): void;
+    
     fun expect(): void;
 }
 automaton org.yaml.snakeyaml.emitter.Emitter$ExpectFirstBlockSequenceItem (val arg0: org.yaml.snakeyaml.emitter.Emitter) : org.yaml.snakeyaml.emitter.Emitter$ExpectFirstBlockSequenceItem {
     val this$0: org.yaml.snakeyaml.emitter.Emitter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter, arg1: org.yaml.snakeyaml.emitter.Emitter$1): void;
+    
     fun expect(): void;
 }
 automaton org.yaml.snakeyaml.emitter.Emitter$ExpectFirstDocumentStart (val arg0: org.yaml.snakeyaml.emitter.Emitter) : org.yaml.snakeyaml.emitter.Emitter$ExpectFirstDocumentStart {
     val this$0: org.yaml.snakeyaml.emitter.Emitter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter, arg1: org.yaml.snakeyaml.emitter.Emitter$1): void;
+    
     fun expect(): void;
 }
 automaton org.yaml.snakeyaml.emitter.Emitter$ExpectFirstFlowMappingKey (val arg0: org.yaml.snakeyaml.emitter.Emitter) : org.yaml.snakeyaml.emitter.Emitter$ExpectFirstFlowMappingKey {
     val this$0: org.yaml.snakeyaml.emitter.Emitter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter, arg1: org.yaml.snakeyaml.emitter.Emitter$1): void;
+    
     fun expect(): void {
         assigns this$0.event;
         assigns this$0.whitespace;
@@ -2781,7 +2947,7 @@ automaton org.yaml.snakeyaml.emitter.Emitter$ExpectFirstFlowMappingKey (val arg0
         assigns this$0.openEnded;
         assigns this$0.indent;
         assigns this$0.flowLevel;
-        assigns this$0.`state`;
+        assigns this$0.state;
         assigns this$0.preparedAnchor;
         assigns this$0.preparedTag;
         assigns this$0.analysis;
@@ -2793,6 +2959,10 @@ automaton org.yaml.snakeyaml.emitter.Emitter$ExpectFirstFlowMappingKey (val arg0
 }
 automaton org.yaml.snakeyaml.emitter.Emitter$ExpectFirstFlowSequenceItem (val arg0: org.yaml.snakeyaml.emitter.Emitter) : org.yaml.snakeyaml.emitter.Emitter$ExpectFirstFlowSequenceItem {
     val this$0: org.yaml.snakeyaml.emitter.Emitter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter, arg1: org.yaml.snakeyaml.emitter.Emitter$1): void;
+    
     fun expect(): void {
         assigns this$0.indent;
         assigns this$0.flowLevel;
@@ -2800,7 +2970,7 @@ automaton org.yaml.snakeyaml.emitter.Emitter$ExpectFirstFlowSequenceItem (val ar
         assigns this$0.whitespace;
         assigns this$0.indention;
         assigns this$0.openEnded;
-        assigns this$0.`state`;
+        assigns this$0.state;
         assigns this$0.rootContext;
         assigns this$0.mappingContext;
         assigns this$0.simpleKeyContext;
@@ -2813,6 +2983,10 @@ automaton org.yaml.snakeyaml.emitter.Emitter$ExpectFirstFlowSequenceItem (val ar
 }
 automaton org.yaml.snakeyaml.emitter.Emitter$ExpectFlowMappingKey (val arg0: org.yaml.snakeyaml.emitter.Emitter) : org.yaml.snakeyaml.emitter.Emitter$ExpectFlowMappingKey {
     val this$0: org.yaml.snakeyaml.emitter.Emitter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter, arg1: org.yaml.snakeyaml.emitter.Emitter$1): void;
+    
     fun expect(): void {
         assigns this$0.indent;
         assigns this$0.flowLevel;
@@ -2820,7 +2994,7 @@ automaton org.yaml.snakeyaml.emitter.Emitter$ExpectFlowMappingKey (val arg0: org
         assigns this$0.whitespace;
         assigns this$0.indention;
         assigns this$0.openEnded;
-        assigns this$0.`state`;
+        assigns this$0.state;
         assigns this$0.event;
         assigns this$0.preparedAnchor;
         assigns this$0.preparedTag;
@@ -2833,6 +3007,10 @@ automaton org.yaml.snakeyaml.emitter.Emitter$ExpectFlowMappingKey (val arg0: org
 }
 automaton org.yaml.snakeyaml.emitter.Emitter$ExpectFlowMappingSimpleValue (val arg0: org.yaml.snakeyaml.emitter.Emitter) : org.yaml.snakeyaml.emitter.Emitter$ExpectFlowMappingSimpleValue {
     val this$0: org.yaml.snakeyaml.emitter.Emitter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter, arg1: org.yaml.snakeyaml.emitter.Emitter$1): void;
+    
     fun expect(): void {
         assigns this$0.event;
         assigns this$0.column;
@@ -2842,7 +3020,7 @@ automaton org.yaml.snakeyaml.emitter.Emitter$ExpectFlowMappingSimpleValue (val a
         assigns this$0.rootContext;
         assigns this$0.mappingContext;
         assigns this$0.simpleKeyContext;
-        assigns this$0.`state`;
+        assigns this$0.state;
         assigns this$0.preparedAnchor;
         assigns this$0.style;
         assigns this$0.preparedTag;
@@ -2853,6 +3031,10 @@ automaton org.yaml.snakeyaml.emitter.Emitter$ExpectFlowMappingSimpleValue (val a
 }
 automaton org.yaml.snakeyaml.emitter.Emitter$ExpectFlowMappingValue (val arg0: org.yaml.snakeyaml.emitter.Emitter) : org.yaml.snakeyaml.emitter.Emitter$ExpectFlowMappingValue {
     val this$0: org.yaml.snakeyaml.emitter.Emitter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter, arg1: org.yaml.snakeyaml.emitter.Emitter$1): void;
+    
     fun expect(): void {
         assigns this$0.event;
         assigns this$0.column;
@@ -2862,7 +3044,7 @@ automaton org.yaml.snakeyaml.emitter.Emitter$ExpectFlowMappingValue (val arg0: o
         assigns this$0.rootContext;
         assigns this$0.mappingContext;
         assigns this$0.simpleKeyContext;
-        assigns this$0.`state`;
+        assigns this$0.state;
         assigns this$0.preparedAnchor;
         assigns this$0.style;
         assigns this$0.preparedTag;
@@ -2873,6 +3055,10 @@ automaton org.yaml.snakeyaml.emitter.Emitter$ExpectFlowMappingValue (val arg0: o
 }
 automaton org.yaml.snakeyaml.emitter.Emitter$ExpectFlowSequenceItem (val arg0: org.yaml.snakeyaml.emitter.Emitter) : org.yaml.snakeyaml.emitter.Emitter$ExpectFlowSequenceItem {
     val this$0: org.yaml.snakeyaml.emitter.Emitter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter, arg1: org.yaml.snakeyaml.emitter.Emitter$1): void;
+    
     fun expect(): void {
         assigns this$0.indent;
         assigns this$0.flowLevel;
@@ -2880,7 +3066,7 @@ automaton org.yaml.snakeyaml.emitter.Emitter$ExpectFlowSequenceItem (val arg0: o
         assigns this$0.whitespace;
         assigns this$0.indention;
         assigns this$0.openEnded;
-        assigns this$0.`state`;
+        assigns this$0.state;
         assigns this$0.event;
         assigns this$0.rootContext;
         assigns this$0.mappingContext;
@@ -2893,26 +3079,42 @@ automaton org.yaml.snakeyaml.emitter.Emitter$ExpectFlowSequenceItem (val arg0: o
 }
 automaton org.yaml.snakeyaml.emitter.Emitter$ExpectNothing (val arg0: org.yaml.snakeyaml.emitter.Emitter) : org.yaml.snakeyaml.emitter.Emitter$ExpectNothing {
     val this$0: org.yaml.snakeyaml.emitter.Emitter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter, arg1: org.yaml.snakeyaml.emitter.Emitter$1): void;
+    
     fun expect(): void;
 }
 automaton org.yaml.snakeyaml.emitter.Emitter$ExpectStreamStart (val arg0: org.yaml.snakeyaml.emitter.Emitter) : org.yaml.snakeyaml.emitter.Emitter$ExpectStreamStart {
     val this$0: org.yaml.snakeyaml.emitter.Emitter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitter, arg1: org.yaml.snakeyaml.emitter.Emitter$1): void;
+    
     fun expect(): void {
-        assigns this$0.`state`;
+        assigns this$0.state;
     }
 }
 automaton org.yaml.snakeyaml.emitter.EmitterException (val arg0: java.lang.String) : org.yaml.snakeyaml.emitter.EmitterException {
     val serialVersionUID: long;
+    constructor `constructor`(arg0: java.lang.String): void;
+    
 }
 automaton org.yaml.snakeyaml.emitter.EmitterState : org.yaml.snakeyaml.emitter.EmitterState {
     fun expect(): void;
 }
 automaton org.yaml.snakeyaml.util.EnumUtils : org.yaml.snakeyaml.util.EnumUtils {
+    constructor `constructor`(): void;
+    
     fun findEnumInsensitiveCase(arg0: java.lang.Class, arg1: java.lang.String): java.lang.Enum;
 }
 automaton org.yaml.snakeyaml.env.EnvScalarConstructor : org.yaml.snakeyaml.env.EnvScalarConstructor {
     val ENV_TAG: org.yaml.snakeyaml.nodes.Tag;
     val ENV_FORMAT: java.util.regex.Pattern;
+    constructor `constructor`(): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.TypeDescription, arg1: java.util.Collection, arg2: org.yaml.snakeyaml.LoaderOptions): void;
+    
     fun access$100(arg0: org.yaml.snakeyaml.env.EnvScalarConstructor, arg1: org.yaml.snakeyaml.nodes.ScalarNode): java.lang.String;
     
     fun apply(arg0: java.lang.String, arg1: java.lang.String, arg2: java.lang.String, arg3: java.lang.String): java.lang.String;
@@ -2928,6 +3130,10 @@ automaton org.yaml.snakeyaml.env.EnvScalarConstructor$1 : org.yaml.snakeyaml.env
 }
 automaton org.yaml.snakeyaml.env.EnvScalarConstructor$ConstructEnv (val arg0: org.yaml.snakeyaml.env.EnvScalarConstructor) : org.yaml.snakeyaml.env.EnvScalarConstructor$ConstructEnv {
     val this$0: org.yaml.snakeyaml.env.EnvScalarConstructor;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.env.EnvScalarConstructor): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.env.EnvScalarConstructor, arg1: org.yaml.snakeyaml.env.EnvScalarConstructor$1): void;
+    
     fun construct(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Object;
 }
 automaton org.yaml.snakeyaml.external.com.google.gdata.util.common.base.Escaper : org.yaml.snakeyaml.external.com.google.gdata.util.common.base.Escaper {
@@ -2938,6 +3144,8 @@ automaton org.yaml.snakeyaml.external.com.google.gdata.util.common.base.Escaper 
 automaton org.yaml.snakeyaml.events.Event (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.events.Event {
     val startMark: org.yaml.snakeyaml.error.Mark;
     val endMark: org.yaml.snakeyaml.error.Mark;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark): void;
+    
     fun equals(arg0: java.lang.Object): bool;
     
     fun getArguments(): java.lang.String;
@@ -2967,6 +3175,8 @@ automaton org.yaml.snakeyaml.events.Event$ID (val arg0: java.lang.String, val ar
     val StreamEnd: org.yaml.snakeyaml.events.Event$ID;
     val StreamStart: org.yaml.snakeyaml.events.Event$ID;
     val $VALUES: array<org.yaml.snakeyaml.events.Event$ID>;
+    constructor `constructor`(arg0: java.lang.String, arg1: int): void;
+    
     fun `static-constructor`(): void {
         assigns Alias;
         assigns Comment;
@@ -2988,33 +3198,47 @@ automaton org.yaml.snakeyaml.events.Event$ID (val arg0: java.lang.String, val ar
 }
 automaton org.yaml.snakeyaml.introspector.FieldProperty (val arg0: java.lang.reflect.Field) : org.yaml.snakeyaml.introspector.FieldProperty {
     val field: java.lang.reflect.Field;
+    constructor `constructor`(arg0: java.lang.reflect.Field): void;
+    
     fun get(arg0: java.lang.Object): java.lang.Object;
     
-    fun getAnnotation(arg0: java.lang.Class): `java.lang.annotation.Annotation`;
+    fun getAnnotation(arg0: java.lang.Class): `<UNRESOLVED_TYPE>`;
     
     fun getAnnotations(): java.util.List;
     
     fun set(arg0: java.lang.Object, arg1: java.lang.Object): void;
 }
 automaton org.yaml.snakeyaml.tokens.FlowEntryToken (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.tokens.FlowEntryToken {
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getTokenId(): org.yaml.snakeyaml.tokens.Token$ID;
 }
 automaton org.yaml.snakeyaml.tokens.FlowMappingEndToken (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.tokens.FlowMappingEndToken {
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getTokenId(): org.yaml.snakeyaml.tokens.Token$ID;
 }
 automaton org.yaml.snakeyaml.tokens.FlowMappingStartToken (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.tokens.FlowMappingStartToken {
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getTokenId(): org.yaml.snakeyaml.tokens.Token$ID;
 }
 automaton org.yaml.snakeyaml.tokens.FlowSequenceEndToken (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.tokens.FlowSequenceEndToken {
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getTokenId(): org.yaml.snakeyaml.tokens.Token$ID;
 }
 automaton org.yaml.snakeyaml.tokens.FlowSequenceStartToken (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.tokens.FlowSequenceStartToken {
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getTokenId(): org.yaml.snakeyaml.tokens.Token$ID;
 }
 automaton org.yaml.snakeyaml.introspector.GenericProperty (val arg0: java.lang.String, val arg1: java.lang.Class, val arg2: java.lang.reflect.Type) : org.yaml.snakeyaml.introspector.GenericProperty {
     val genType: java.lang.reflect.Type;
     val actualClassesChecked: bool;
     val actualClasses: array<java.lang.Class>;
+    constructor `constructor`(arg0: java.lang.String, arg1: java.lang.Class, arg2: java.lang.reflect.Type): void;
+    
     fun getActualTypeArguments(): array<java.lang.Class> {
         assigns actualClasses;
         assigns actualClassesChecked;
@@ -3023,6 +3247,8 @@ automaton org.yaml.snakeyaml.introspector.GenericProperty (val arg0: java.lang.S
 automaton org.yaml.snakeyaml.events.ImplicitTuple (val arg0: bool, val arg1: bool) : org.yaml.snakeyaml.events.ImplicitTuple {
     val plain: bool;
     val nonPlain: bool;
+    constructor `constructor`(arg0: bool, arg1: bool): void;
+    
     fun bothFalse(): bool;
     
     fun canOmitTagInNonPlainScalar(): bool;
@@ -3032,6 +3258,8 @@ automaton org.yaml.snakeyaml.events.ImplicitTuple (val arg0: bool, val arg1: boo
     fun toString(): java.lang.String;
 }
 automaton org.yaml.snakeyaml.tokens.KeyToken (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.tokens.KeyToken {
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getTokenId(): org.yaml.snakeyaml.tokens.Token$ID;
 }
 automaton org.yaml.snakeyaml.LoaderOptions : org.yaml.snakeyaml.LoaderOptions {
@@ -3044,6 +3272,8 @@ automaton org.yaml.snakeyaml.LoaderOptions : org.yaml.snakeyaml.LoaderOptions {
     val nestingDepthLimit: int;
     val codePointLimit: int;
     val tagInspector: org.yaml.snakeyaml.inspector.TagInspector;
+    constructor `constructor`(): void;
+    
     fun getAllowRecursiveKeys(): bool;
     
     fun getCodePointLimit(): int;
@@ -3100,6 +3330,8 @@ automaton org.yaml.snakeyaml.LoaderOptions : org.yaml.snakeyaml.LoaderOptions {
 }
 automaton org.yaml.snakeyaml.internal.Logger (val arg0: java.lang.String) : org.yaml.snakeyaml.internal.Logger {
     val logger: java.util.logging.Logger;
+    constructor `constructor`(arg0: java.lang.String): void;
+    
     fun getLogger(arg0: java.lang.String): org.yaml.snakeyaml.internal.Logger;
     
     fun isLoggable(arg0: org.yaml.snakeyaml.internal.Logger$Level): bool;
@@ -3110,6 +3342,8 @@ automaton org.yaml.snakeyaml.internal.Logger$Level (val arg0: java.lang.String, 
     val WARNING: org.yaml.snakeyaml.internal.Logger$Level;
     val level: java.util.logging.Level;
     val $VALUES: array<org.yaml.snakeyaml.internal.Logger$Level>;
+    constructor `constructor`(arg0: java.lang.String, arg1: int, arg2: java.util.logging.Level): void;
+    
     fun access$000(arg0: org.yaml.snakeyaml.internal.Logger$Level): java.util.logging.Level;
     
     fun `static-constructor`(): void {
@@ -3122,11 +3356,17 @@ automaton org.yaml.snakeyaml.internal.Logger$Level (val arg0: java.lang.String, 
     fun values(): array<org.yaml.snakeyaml.internal.Logger$Level>;
 }
 automaton org.yaml.snakeyaml.events.MappingEndEvent (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.events.MappingEndEvent {
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getEventId(): org.yaml.snakeyaml.events.Event$ID;
 }
 automaton org.yaml.snakeyaml.nodes.MappingNode (val arg0: org.yaml.snakeyaml.nodes.Tag, val arg1: bool, val arg2: java.util.List, val arg3: org.yaml.snakeyaml.error.Mark, val arg4: org.yaml.snakeyaml.error.Mark, val arg5: org.yaml.snakeyaml.DumperOptions$FlowStyle) : org.yaml.snakeyaml.nodes.MappingNode {
     val value: java.util.List;
     val merged: bool;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.nodes.Tag, arg1: bool, arg2: java.util.List, arg3: org.yaml.snakeyaml.error.Mark, arg4: org.yaml.snakeyaml.error.Mark, arg5: org.yaml.snakeyaml.DumperOptions$FlowStyle): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.nodes.Tag, arg1: java.util.List, arg2: org.yaml.snakeyaml.DumperOptions$FlowStyle): void;
+    
     fun getNodeId(): org.yaml.snakeyaml.nodes.NodeId;
     
     fun getValue(): java.util.List;
@@ -3148,6 +3388,8 @@ automaton org.yaml.snakeyaml.nodes.MappingNode (val arg0: org.yaml.snakeyaml.nod
     fun toString(): java.lang.String;
 }
 automaton org.yaml.snakeyaml.events.MappingStartEvent (val arg0: java.lang.String, val arg1: java.lang.String, val arg2: bool, val arg3: org.yaml.snakeyaml.error.Mark, val arg4: org.yaml.snakeyaml.error.Mark, val arg5: org.yaml.snakeyaml.DumperOptions$FlowStyle) : org.yaml.snakeyaml.events.MappingStartEvent {
+    constructor `constructor`(arg0: java.lang.String, arg1: java.lang.String, arg2: bool, arg3: org.yaml.snakeyaml.error.Mark, arg4: org.yaml.snakeyaml.error.Mark, arg5: org.yaml.snakeyaml.DumperOptions$FlowStyle): void;
+    
     fun getEventId(): org.yaml.snakeyaml.events.Event$ID;
 }
 automaton org.yaml.snakeyaml.error.Mark (val arg0: java.lang.String, val arg1: int, val arg2: int, val arg3: int, val arg4: array<char>, val arg5: int) : org.yaml.snakeyaml.error.Mark {
@@ -3157,6 +3399,10 @@ automaton org.yaml.snakeyaml.error.Mark (val arg0: java.lang.String, val arg1: i
     val column: int;
     val buffer: array<int>;
     val pointer: int;
+    constructor `constructor`(arg0: java.lang.String, arg1: int, arg2: int, arg3: int, arg4: array, arg5: int): void;
+    
+    constructor `constructor`(arg0: java.lang.String, arg1: int, arg2: int, arg3: int, arg4: array, arg5: int): void;
+    
     fun getBuffer(): array<int>;
     
     fun getColumn(): int;
@@ -3186,6 +3432,14 @@ automaton org.yaml.snakeyaml.error.MarkedYAMLException (val arg0: java.lang.Stri
     val problem: java.lang.String;
     val problemMark: org.yaml.snakeyaml.error.Mark;
     val note: java.lang.String;
+    constructor `constructor`(arg0: java.lang.String, arg1: org.yaml.snakeyaml.error.Mark, arg2: java.lang.String, arg3: org.yaml.snakeyaml.error.Mark, arg4: java.lang.String): void;
+    
+    constructor `constructor`(arg0: java.lang.String, arg1: org.yaml.snakeyaml.error.Mark, arg2: java.lang.String, arg3: org.yaml.snakeyaml.error.Mark, arg4: java.lang.String, arg5: java.lang.Throwable): void;
+    
+    constructor `constructor`(arg0: java.lang.String, arg1: org.yaml.snakeyaml.error.Mark, arg2: java.lang.String, arg3: org.yaml.snakeyaml.error.Mark): void;
+    
+    constructor `constructor`(arg0: java.lang.String, arg1: org.yaml.snakeyaml.error.Mark, arg2: java.lang.String, arg3: org.yaml.snakeyaml.error.Mark, arg4: java.lang.Throwable): void;
+    
     fun getContext(): java.lang.String;
     
     fun getContextMark(): org.yaml.snakeyaml.error.Mark;
@@ -3202,11 +3456,13 @@ automaton org.yaml.snakeyaml.introspector.MethodProperty (val arg0: java.beans.P
     val property: java.beans.PropertyDescriptor;
     val readable: bool;
     val writable: bool;
+    constructor `constructor`(arg0: java.beans.PropertyDescriptor): void;
+    
     fun discoverGenericType(arg0: java.beans.PropertyDescriptor): java.lang.reflect.Type;
     
     fun get(arg0: java.lang.Object): java.lang.Object;
     
-    fun getAnnotation(arg0: java.lang.Class): `java.lang.annotation.Annotation`;
+    fun getAnnotation(arg0: java.lang.Class): `<UNRESOLVED_TYPE>`;
     
     fun getAnnotations(): java.util.List;
     
@@ -3217,13 +3473,17 @@ automaton org.yaml.snakeyaml.introspector.MethodProperty (val arg0: java.beans.P
     fun set(arg0: java.lang.Object, arg1: java.lang.Object): void;
 }
 automaton org.yaml.snakeyaml.error.MissingEnvironmentVariableException (val arg0: java.lang.String) : org.yaml.snakeyaml.error.MissingEnvironmentVariableException {
+    constructor `constructor`(arg0: java.lang.String): void;
+    
 }
 automaton org.yaml.snakeyaml.introspector.MissingProperty (val arg0: java.lang.String) : org.yaml.snakeyaml.introspector.MissingProperty {
+    constructor `constructor`(arg0: java.lang.String): void;
+    
     fun get(arg0: java.lang.Object): java.lang.Object;
     
     fun getActualTypeArguments(): array<java.lang.Class>;
     
-    fun getAnnotation(arg0: java.lang.Class): `java.lang.annotation.Annotation`;
+    fun getAnnotation(arg0: java.lang.Class): `<UNRESOLVED_TYPE>`;
     
     fun getAnnotations(): java.util.List;
     
@@ -3241,6 +3501,10 @@ automaton org.yaml.snakeyaml.nodes.Node (val arg0: org.yaml.snakeyaml.nodes.Tag,
     val endComments: java.util.List;
     val resolved: bool;
     val useClassConstructor: bool;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.nodes.Tag, arg1: org.yaml.snakeyaml.error.Mark, arg2: org.yaml.snakeyaml.error.Mark): void {
+        assigns tag;
+    }
+    
     fun equals(arg0: java.lang.Object): bool;
     
     fun getAnchor(): java.lang.String;
@@ -3290,7 +3554,7 @@ automaton org.yaml.snakeyaml.nodes.Node (val arg0: org.yaml.snakeyaml.nodes.Tag,
     }
     
     fun setType(arg0: java.lang.Class): void {
-        assigns `type`;
+        assigns type;
     }
     
     fun setUseClassConstructor(arg0: bool): void {
@@ -3301,6 +3565,8 @@ automaton org.yaml.snakeyaml.nodes.Node (val arg0: org.yaml.snakeyaml.nodes.Tag,
 }
 automaton org.yaml.snakeyaml.events.NodeEvent (val arg0: java.lang.String, val arg1: org.yaml.snakeyaml.error.Mark, val arg2: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.events.NodeEvent {
     val anchor: java.lang.String;
+    constructor `constructor`(arg0: java.lang.String, arg1: org.yaml.snakeyaml.error.Mark, arg2: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getAnchor(): java.lang.String;
     
     fun getArguments(): java.lang.String;
@@ -3311,6 +3577,8 @@ automaton org.yaml.snakeyaml.nodes.NodeId (val arg0: java.lang.String, val arg1:
     val mapping: org.yaml.snakeyaml.nodes.NodeId;
     val anchor: org.yaml.snakeyaml.nodes.NodeId;
     val $VALUES: array<org.yaml.snakeyaml.nodes.NodeId>;
+    constructor `constructor`(arg0: java.lang.String, arg1: int): void;
+    
     fun `static-constructor`(): void {
         assigns scalar;
         assigns sequence;
@@ -3326,6 +3594,8 @@ automaton org.yaml.snakeyaml.nodes.NodeId (val arg0: java.lang.String, val arg1:
 automaton org.yaml.snakeyaml.nodes.NodeTuple (val arg0: org.yaml.snakeyaml.nodes.Node, val arg1: org.yaml.snakeyaml.nodes.Node) : org.yaml.snakeyaml.nodes.NodeTuple {
     val keyNode: org.yaml.snakeyaml.nodes.Node;
     val valueNode: org.yaml.snakeyaml.nodes.Node;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.nodes.Node, arg1: org.yaml.snakeyaml.nodes.Node): void;
+    
     fun getKeyNode(): org.yaml.snakeyaml.nodes.Node;
     
     fun getValueNode(): org.yaml.snakeyaml.nodes.Node;
@@ -3334,12 +3604,16 @@ automaton org.yaml.snakeyaml.nodes.NodeTuple (val arg0: org.yaml.snakeyaml.nodes
 }
 automaton org.yaml.snakeyaml.serializer.NumberAnchorGenerator (val arg0: int) : org.yaml.snakeyaml.serializer.NumberAnchorGenerator {
     val lastAnchorId: int;
+    constructor `constructor`(arg0: int): void;
+    
     fun nextAnchor(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.String {
         assigns lastAnchorId;
     }
 }
 automaton org.yaml.snakeyaml.extensions.compactnotation.PackageCompactConstructor (val arg0: java.lang.String) : org.yaml.snakeyaml.extensions.compactnotation.PackageCompactConstructor {
     val packageName: java.lang.String;
+    constructor `constructor`(arg0: java.lang.String): void;
+    
     fun getClassForName(arg0: java.lang.String): java.lang.Class;
 }
 automaton org.yaml.snakeyaml.parser.Parser : org.yaml.snakeyaml.parser.Parser {
@@ -3351,6 +3625,8 @@ automaton org.yaml.snakeyaml.parser.Parser : org.yaml.snakeyaml.parser.Parser {
 }
 automaton org.yaml.snakeyaml.parser.ParserException (val arg0: java.lang.String, val arg1: org.yaml.snakeyaml.error.Mark, val arg2: java.lang.String, val arg3: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.parser.ParserException {
     val serialVersionUID: long;
+    constructor `constructor`(arg0: java.lang.String, arg1: org.yaml.snakeyaml.error.Mark, arg2: java.lang.String, arg3: org.yaml.snakeyaml.error.Mark): void;
+    
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl (val arg0: org.yaml.snakeyaml.reader.StreamReader, val arg1: org.yaml.snakeyaml.LoaderOptions) : org.yaml.snakeyaml.parser.ParserImpl {
     val DEFAULT_TAGS: java.util.Map;
@@ -3360,26 +3636,30 @@ automaton org.yaml.snakeyaml.parser.ParserImpl (val arg0: org.yaml.snakeyaml.rea
     val marks: org.yaml.snakeyaml.util.ArrayStack;
     val `state`: org.yaml.snakeyaml.parser.Production;
     val directives: org.yaml.snakeyaml.parser.VersionTagsTuple;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.reader.StreamReader, arg1: org.yaml.snakeyaml.LoaderOptions): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.scanner.Scanner): void;
+    
     fun access$100(arg0: org.yaml.snakeyaml.parser.ParserImpl): org.yaml.snakeyaml.parser.Production;
     
     fun access$1000(arg0: org.yaml.snakeyaml.parser.ParserImpl): org.yaml.snakeyaml.util.ArrayStack;
     
     fun access$102(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.parser.Production): org.yaml.snakeyaml.parser.Production {
-        assigns arg0.`state`;
+        assigns arg0.state;
     }
     
     fun access$1100(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.error.Mark): org.yaml.snakeyaml.events.Event;
     
     fun access$1200(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: bool, arg2: bool): org.yaml.snakeyaml.events.Event {
-        assigns arg0.`state`;
+        assigns arg0.state;
     }
     
     fun access$2100(arg0: org.yaml.snakeyaml.parser.ParserImpl): org.yaml.snakeyaml.events.Event {
-        assigns arg0.`state`;
+        assigns arg0.state;
     }
     
     fun access$2400(arg0: org.yaml.snakeyaml.parser.ParserImpl): org.yaml.snakeyaml.events.Event {
-        assigns arg0.`state`;
+        assigns arg0.state;
     }
     
     fun access$300(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.tokens.CommentToken): org.yaml.snakeyaml.events.CommentEvent;
@@ -3399,15 +3679,15 @@ automaton org.yaml.snakeyaml.parser.ParserImpl (val arg0: org.yaml.snakeyaml.rea
     }
     
     fun parseBlockNodeOrIndentlessSequence(): org.yaml.snakeyaml.events.Event {
-        assigns `state`;
+        assigns state;
     }
     
     fun parseFlowNode(): org.yaml.snakeyaml.events.Event {
-        assigns `state`;
+        assigns state;
     }
     
     fun parseNode(arg0: bool, arg1: bool): org.yaml.snakeyaml.events.Event {
-        assigns `state`;
+        assigns state;
     }
     
     fun peekEvent(): org.yaml.snakeyaml.events.Event {
@@ -3430,155 +3710,249 @@ automaton org.yaml.snakeyaml.parser.ParserImpl$1 : org.yaml.snakeyaml.parser.Par
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingFirstKey (val arg0: org.yaml.snakeyaml.parser.ParserImpl) : org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingFirstKey {
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.parser.ParserImpl$1): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event;
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey (val arg0: org.yaml.snakeyaml.parser.ParserImpl) : org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey {
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.parser.ParserImpl$1): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event {
-        assigns this$0.`state`;
+        assigns this$0.state;
     }
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue (val arg0: org.yaml.snakeyaml.parser.ParserImpl) : org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue {
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.parser.ParserImpl$1): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event {
-        assigns this$0.`state`;
+        assigns this$0.state;
     }
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValueComment (val arg0: org.yaml.snakeyaml.parser.ParserImpl) : org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValueComment {
     val tokens: java.util.List;
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.parser.ParserImpl$1): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event {
-        assigns this$0.`state`;
+        assigns this$0.state;
     }
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValueCommentList (val arg0: org.yaml.snakeyaml.parser.ParserImpl, val arg1: java.util.List) : org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValueCommentList {
     val tokens: java.util.List;
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: java.util.List): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event;
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseBlockNode (val arg0: org.yaml.snakeyaml.parser.ParserImpl) : org.yaml.snakeyaml.parser.ParserImpl$ParseBlockNode {
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.parser.ParserImpl$1): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event {
-        assigns this$0.`state`;
+        assigns this$0.state;
     }
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseBlockSequenceEntryKey (val arg0: org.yaml.snakeyaml.parser.ParserImpl) : org.yaml.snakeyaml.parser.ParserImpl$ParseBlockSequenceEntryKey {
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.parser.ParserImpl$1): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event {
-        assigns this$0.`state`;
+        assigns this$0.state;
     }
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseBlockSequenceEntryValue (val arg0: org.yaml.snakeyaml.parser.ParserImpl, val arg1: org.yaml.snakeyaml.tokens.BlockEntryToken) : org.yaml.snakeyaml.parser.ParserImpl$ParseBlockSequenceEntryValue {
     val token: org.yaml.snakeyaml.tokens.BlockEntryToken;
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.tokens.BlockEntryToken): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event {
-        assigns this$0.`state`;
+        assigns this$0.state;
     }
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseBlockSequenceFirstEntry (val arg0: org.yaml.snakeyaml.parser.ParserImpl) : org.yaml.snakeyaml.parser.ParserImpl$ParseBlockSequenceFirstEntry {
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.parser.ParserImpl$1): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event;
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentContent (val arg0: org.yaml.snakeyaml.parser.ParserImpl) : org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentContent {
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.parser.ParserImpl$1): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event {
-        assigns this$0.`state`;
+        assigns this$0.state;
     }
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentEnd (val arg0: org.yaml.snakeyaml.parser.ParserImpl) : org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentEnd {
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.parser.ParserImpl$1): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event {
-        assigns this$0.`state`;
+        assigns this$0.state;
     }
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart (val arg0: org.yaml.snakeyaml.parser.ParserImpl) : org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart {
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.parser.ParserImpl$1): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event {
         assigns this$0.directives;
-        assigns this$0.`state`;
+        assigns this$0.state;
     }
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseFlowEndComment (val arg0: org.yaml.snakeyaml.parser.ParserImpl) : org.yaml.snakeyaml.parser.ParserImpl$ParseFlowEndComment {
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.parser.ParserImpl$1): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event {
-        assigns this$0.`state`;
+        assigns this$0.state;
     }
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseFlowMappingEmptyValue (val arg0: org.yaml.snakeyaml.parser.ParserImpl) : org.yaml.snakeyaml.parser.ParserImpl$ParseFlowMappingEmptyValue {
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.parser.ParserImpl$1): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event {
-        assigns this$0.`state`;
+        assigns this$0.state;
     }
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseFlowMappingFirstKey (val arg0: org.yaml.snakeyaml.parser.ParserImpl) : org.yaml.snakeyaml.parser.ParserImpl$ParseFlowMappingFirstKey {
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.parser.ParserImpl$1): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event;
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseFlowMappingKey (val arg0: org.yaml.snakeyaml.parser.ParserImpl, val arg1: bool) : org.yaml.snakeyaml.parser.ParserImpl$ParseFlowMappingKey {
     val first: bool;
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: bool): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event {
-        assigns this$0.`state`;
+        assigns this$0.state;
     }
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseFlowMappingValue (val arg0: org.yaml.snakeyaml.parser.ParserImpl) : org.yaml.snakeyaml.parser.ParserImpl$ParseFlowMappingValue {
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.parser.ParserImpl$1): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event {
-        assigns this$0.`state`;
+        assigns this$0.state;
     }
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseFlowSequenceEntry (val arg0: org.yaml.snakeyaml.parser.ParserImpl, val arg1: bool) : org.yaml.snakeyaml.parser.ParserImpl$ParseFlowSequenceEntry {
     val first: bool;
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: bool): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event {
-        assigns this$0.`state`;
+        assigns this$0.state;
     }
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseFlowSequenceEntryMappingEnd (val arg0: org.yaml.snakeyaml.parser.ParserImpl) : org.yaml.snakeyaml.parser.ParserImpl$ParseFlowSequenceEntryMappingEnd {
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.parser.ParserImpl$1): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event {
-        assigns this$0.`state`;
+        assigns this$0.state;
     }
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseFlowSequenceEntryMappingKey (val arg0: org.yaml.snakeyaml.parser.ParserImpl) : org.yaml.snakeyaml.parser.ParserImpl$ParseFlowSequenceEntryMappingKey {
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.parser.ParserImpl$1): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event {
-        assigns this$0.`state`;
+        assigns this$0.state;
     }
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseFlowSequenceEntryMappingValue (val arg0: org.yaml.snakeyaml.parser.ParserImpl) : org.yaml.snakeyaml.parser.ParserImpl$ParseFlowSequenceEntryMappingValue {
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.parser.ParserImpl$1): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event {
-        assigns this$0.`state`;
+        assigns this$0.state;
     }
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseFlowSequenceFirstEntry (val arg0: org.yaml.snakeyaml.parser.ParserImpl) : org.yaml.snakeyaml.parser.ParserImpl$ParseFlowSequenceFirstEntry {
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.parser.ParserImpl$1): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event;
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseImplicitDocumentStart (val arg0: org.yaml.snakeyaml.parser.ParserImpl) : org.yaml.snakeyaml.parser.ParserImpl$ParseImplicitDocumentStart {
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.parser.ParserImpl$1): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event {
-        assigns this$0.`state`;
+        assigns this$0.state;
     }
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseIndentlessSequenceEntryKey (val arg0: org.yaml.snakeyaml.parser.ParserImpl) : org.yaml.snakeyaml.parser.ParserImpl$ParseIndentlessSequenceEntryKey {
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.parser.ParserImpl$1): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event {
-        assigns this$0.`state`;
+        assigns this$0.state;
     }
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseIndentlessSequenceEntryValue (val arg0: org.yaml.snakeyaml.parser.ParserImpl, val arg1: org.yaml.snakeyaml.tokens.BlockEntryToken) : org.yaml.snakeyaml.parser.ParserImpl$ParseIndentlessSequenceEntryValue {
     val token: org.yaml.snakeyaml.tokens.BlockEntryToken;
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.tokens.BlockEntryToken): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event {
-        assigns this$0.`state`;
+        assigns this$0.state;
     }
 }
 automaton org.yaml.snakeyaml.parser.ParserImpl$ParseStreamStart (val arg0: org.yaml.snakeyaml.parser.ParserImpl) : org.yaml.snakeyaml.parser.ParserImpl$ParseStreamStart {
     val this$0: org.yaml.snakeyaml.parser.ParserImpl;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.parser.ParserImpl, arg1: org.yaml.snakeyaml.parser.ParserImpl$1): void;
+    
     fun produce(): org.yaml.snakeyaml.events.Event {
-        assigns this$0.`state`;
+        assigns this$0.state;
     }
 }
 automaton org.yaml.snakeyaml.external.com.google.gdata.util.common.base.PercentEscaper (val arg0: java.lang.String, val arg1: bool) : org.yaml.snakeyaml.external.com.google.gdata.util.common.base.PercentEscaper {
@@ -3589,6 +3963,8 @@ automaton org.yaml.snakeyaml.external.com.google.gdata.util.common.base.PercentE
     val UPPER_HEX_DIGITS: array<char>;
     val plusForSpace: bool;
     val safeOctets: array<bool>;
+    constructor `constructor`(arg0: java.lang.String, arg1: bool): void;
+    
     fun createSafeOctets(arg0: java.lang.String): array<bool>;
     
     fun escape(arg0: java.lang.String): java.lang.String;
@@ -3604,6 +3980,8 @@ automaton org.yaml.snakeyaml.external.com.google.gdata.util.common.base.PercentE
 }
 automaton org.yaml.snakeyaml.util.PlatformFeatureDetector : org.yaml.snakeyaml.util.PlatformFeatureDetector {
     val isRunningOnAndroid: bool;
+    constructor `constructor`(): void;
+    
     fun isRunningOnAndroid(): bool {
         assigns isRunningOnAndroid;
     }
@@ -3614,6 +3992,8 @@ automaton org.yaml.snakeyaml.parser.Production : org.yaml.snakeyaml.parser.Produ
 automaton org.yaml.snakeyaml.introspector.Property (val arg0: java.lang.String, val arg1: java.lang.Class) : org.yaml.snakeyaml.introspector.Property {
     val name: java.lang.String;
     val `type`: java.lang.Class;
+    constructor `constructor`(arg0: java.lang.String, arg1: java.lang.Class): void;
+    
     fun compareTo(arg0: org.yaml.snakeyaml.introspector.Property): int;
     
     fun compareTo(arg0: java.lang.Object): int;
@@ -3624,7 +4004,7 @@ automaton org.yaml.snakeyaml.introspector.Property (val arg0: java.lang.String, 
     
     fun getActualTypeArguments(): array<java.lang.Class>;
     
-    fun getAnnotation(arg0: java.lang.Class): `java.lang.annotation.Annotation`;
+    fun getAnnotation(arg0: java.lang.Class): `<UNRESOLVED_TYPE>`;
     
     fun getAnnotations(): java.util.List;
     
@@ -3653,13 +4033,19 @@ automaton org.yaml.snakeyaml.introspector.PropertySubstitute (val arg0: java.lan
     val parameters: array<java.lang.Class>;
     val delegate: org.yaml.snakeyaml.introspector.Property;
     val filler: bool;
+    constructor `constructor`(arg0: java.lang.String, arg1: java.lang.Class, arg2: java.lang.String, arg3: java.lang.String, arg4: array): void {
+        assigns parameters;
+    }
+    
+    constructor `constructor`(arg0: java.lang.String, arg1: java.lang.Class, arg2: array): void;
+    
     fun discoverMethod(arg0: java.lang.Class, arg1: java.lang.String, arg2: array): java.lang.reflect.Method;
     
     fun get(arg0: java.lang.Object): java.lang.Object;
     
     fun getActualTypeArguments(): array<java.lang.Class>;
     
-    fun getAnnotation(arg0: java.lang.Class): `java.lang.annotation.Annotation`;
+    fun getAnnotation(arg0: java.lang.Class): `<UNRESOLVED_TYPE>`;
     
     fun getAnnotations(): java.util.List;
     
@@ -3703,6 +4089,12 @@ automaton org.yaml.snakeyaml.introspector.PropertyUtils : org.yaml.snakeyaml.int
     val skipMissingProperties: bool;
     val platformFeatureDetector: org.yaml.snakeyaml.util.PlatformFeatureDetector;
     val TRANSIENT: java.lang.String;
+    constructor `constructor`(): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.util.PlatformFeatureDetector): void {
+        assigns arg0.isRunningOnAndroid;
+    }
+    
     fun createPropertySet(arg0: java.lang.Class, arg1: org.yaml.snakeyaml.introspector.BeanAccess): java.util.Set;
     
     fun getProperties(arg0: java.lang.Class): java.util.Set;
@@ -3738,6 +4130,8 @@ automaton org.yaml.snakeyaml.reader.ReaderException (val arg0: java.lang.String,
     val name: java.lang.String;
     val codePoint: int;
     val position: int;
+    constructor `constructor`(arg0: java.lang.String, arg1: int, arg2: int, arg3: java.lang.String): void;
+    
     fun getCodePoint(): int;
     
     fun getName(): java.lang.String;
@@ -3751,6 +4145,8 @@ automaton org.yaml.snakeyaml.representer.Represent : org.yaml.snakeyaml.represen
 }
 automaton org.yaml.snakeyaml.representer.Representer (val arg0: org.yaml.snakeyaml.DumperOptions) : org.yaml.snakeyaml.representer.Representer {
     val typeDefinitions: java.util.Map;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.DumperOptions): void;
+    
     fun addClassTag(arg0: java.lang.Class, arg1: org.yaml.snakeyaml.nodes.Tag): org.yaml.snakeyaml.nodes.Tag;
     
     fun addTypeDescription(arg0: org.yaml.snakeyaml.TypeDescription): org.yaml.snakeyaml.TypeDescription {
@@ -3782,6 +4178,8 @@ automaton org.yaml.snakeyaml.representer.Representer (val arg0: org.yaml.snakeya
 }
 automaton org.yaml.snakeyaml.representer.Representer$RepresentJavaBean (val arg0: org.yaml.snakeyaml.representer.Representer) : org.yaml.snakeyaml.representer.Representer$RepresentJavaBean {
     val this$0: org.yaml.snakeyaml.representer.Representer;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.representer.Representer): void;
+    
     fun representData(arg0: java.lang.Object): org.yaml.snakeyaml.nodes.Node;
 }
 automaton org.yaml.snakeyaml.resolver.Resolver : org.yaml.snakeyaml.resolver.Resolver {
@@ -3795,6 +4193,8 @@ automaton org.yaml.snakeyaml.resolver.Resolver : org.yaml.snakeyaml.resolver.Res
     val VALUE: java.util.regex.Pattern;
     val YAML: java.util.regex.Pattern;
     val yamlImplicitResolvers: java.util.Map;
+    constructor `constructor`(): void;
+    
     fun addImplicitResolver(arg0: org.yaml.snakeyaml.nodes.Tag, arg1: java.util.regex.Pattern, arg2: java.lang.String): void;
     
     fun addImplicitResolver(arg0: org.yaml.snakeyaml.nodes.Tag, arg1: java.util.regex.Pattern, arg2: java.lang.String, arg3: int): void;
@@ -3825,6 +4225,8 @@ automaton org.yaml.snakeyaml.resolver.ResolverTuple (val arg0: org.yaml.snakeyam
     val tag: org.yaml.snakeyaml.nodes.Tag;
     val regexp: java.util.regex.Pattern;
     val limit: int;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.nodes.Tag, arg1: java.util.regex.Pattern, arg2: int): void;
+    
     fun getLimit(): int;
     
     fun getRegexp(): java.util.regex.Pattern;
@@ -3833,15 +4235,17 @@ automaton org.yaml.snakeyaml.resolver.ResolverTuple (val arg0: org.yaml.snakeyam
     
     fun toString(): java.lang.String;
 }
-automaton `org.yaml.snakeyaml.constructor.SafeConstructor` (val arg0: org.yaml.snakeyaml.LoaderOptions) : `org.yaml.snakeyaml.constructor.SafeConstructor` {
-    val undefinedConstructor: `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructUndefined`;
+automaton org.yaml.snakeyaml.constructor.SafeConstructor (val arg0: org.yaml.snakeyaml.LoaderOptions) : org.yaml.snakeyaml.constructor.SafeConstructor {
+    val undefinedConstructor: org.yaml.snakeyaml.constructor.SafeConstructor$ConstructUndefined;
     val BOOL_VALUES: java.util.Map;
     val RADIX_MAX: array<array<int>>;
     val TIMESTAMP_REGEXP: java.util.regex.Pattern;
     val YMD_REGEXP: java.util.regex.Pattern;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.LoaderOptions): void;
+    
     fun access$000(): java.util.Map;
     
-    fun access$100(arg0: `org.yaml.snakeyaml.constructor.SafeConstructor`, arg1: int, arg2: java.lang.String, arg3: int): java.lang.Number;
+    fun access$100(arg0: org.yaml.snakeyaml.constructor.SafeConstructor, arg1: int, arg2: java.lang.String, arg3: int): java.lang.Number;
     
     fun access$200(): java.util.regex.Pattern;
     
@@ -3885,67 +4289,93 @@ automaton `org.yaml.snakeyaml.constructor.SafeConstructor` (val arg0: org.yaml.s
         assigns YMD_REGEXP;
     }
 }
-automaton `org.yaml.snakeyaml.constructor.SafeConstructor$1` : `org.yaml.snakeyaml.constructor.SafeConstructor$1` {
+automaton org.yaml.snakeyaml.constructor.SafeConstructor$1 : org.yaml.snakeyaml.constructor.SafeConstructor$1 {
     val $SwitchMap$org$yaml$snakeyaml$nodes$NodeId: array<int>;
     fun `static-constructor`(): void {
         assigns $SwitchMap$org$yaml$snakeyaml$nodes$NodeId;
     }
 }
-automaton `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructUndefined` : `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructUndefined` {
+automaton org.yaml.snakeyaml.constructor.SafeConstructor$ConstructUndefined : org.yaml.snakeyaml.constructor.SafeConstructor$ConstructUndefined {
+    constructor `constructor`(): void;
+    
     fun construct(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Object;
 }
-automaton `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlBinary` (val arg0: `org.yaml.snakeyaml.constructor.SafeConstructor`) : `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlBinary` {
-    val this$0: `org.yaml.snakeyaml.constructor.SafeConstructor`;
+automaton org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlBinary (val arg0: org.yaml.snakeyaml.constructor.SafeConstructor) : org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlBinary {
+    val this$0: org.yaml.snakeyaml.constructor.SafeConstructor;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.constructor.SafeConstructor): void;
+    
     fun construct(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Object;
 }
-automaton `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlBool` (val arg0: `org.yaml.snakeyaml.constructor.SafeConstructor`) : `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlBool` {
-    val this$0: `org.yaml.snakeyaml.constructor.SafeConstructor`;
+automaton org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlBool (val arg0: org.yaml.snakeyaml.constructor.SafeConstructor) : org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlBool {
+    val this$0: org.yaml.snakeyaml.constructor.SafeConstructor;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.constructor.SafeConstructor): void;
+    
     fun construct(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Object;
 }
-automaton `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlFloat` (val arg0: `org.yaml.snakeyaml.constructor.SafeConstructor`) : `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlFloat` {
-    val this$0: `org.yaml.snakeyaml.constructor.SafeConstructor`;
+automaton org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlFloat (val arg0: org.yaml.snakeyaml.constructor.SafeConstructor) : org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlFloat {
+    val this$0: org.yaml.snakeyaml.constructor.SafeConstructor;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.constructor.SafeConstructor): void;
+    
     fun construct(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Object;
 }
-automaton `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlInt` (val arg0: `org.yaml.snakeyaml.constructor.SafeConstructor`) : `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlInt` {
-    val this$0: `org.yaml.snakeyaml.constructor.SafeConstructor`;
+automaton org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlInt (val arg0: org.yaml.snakeyaml.constructor.SafeConstructor) : org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlInt {
+    val this$0: org.yaml.snakeyaml.constructor.SafeConstructor;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.constructor.SafeConstructor): void;
+    
     fun construct(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Object;
 }
-automaton `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlMap` (val arg0: `org.yaml.snakeyaml.constructor.SafeConstructor`) : `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlMap` {
-    val this$0: `org.yaml.snakeyaml.constructor.SafeConstructor`;
+automaton org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlMap (val arg0: org.yaml.snakeyaml.constructor.SafeConstructor) : org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlMap {
+    val this$0: org.yaml.snakeyaml.constructor.SafeConstructor;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.constructor.SafeConstructor): void;
+    
     fun construct(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Object;
     
     fun construct2ndStep(arg0: org.yaml.snakeyaml.nodes.Node, arg1: java.lang.Object): void;
 }
-automaton `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlNull` (val arg0: `org.yaml.snakeyaml.constructor.SafeConstructor`) : `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlNull` {
-    val this$0: `org.yaml.snakeyaml.constructor.SafeConstructor`;
+automaton org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlNull (val arg0: org.yaml.snakeyaml.constructor.SafeConstructor) : org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlNull {
+    val this$0: org.yaml.snakeyaml.constructor.SafeConstructor;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.constructor.SafeConstructor): void;
+    
     fun construct(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Object;
 }
-automaton `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlOmap` (val arg0: `org.yaml.snakeyaml.constructor.SafeConstructor`) : `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlOmap` {
-    val this$0: `org.yaml.snakeyaml.constructor.SafeConstructor`;
+automaton org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlOmap (val arg0: org.yaml.snakeyaml.constructor.SafeConstructor) : org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlOmap {
+    val this$0: org.yaml.snakeyaml.constructor.SafeConstructor;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.constructor.SafeConstructor): void;
+    
     fun construct(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Object;
 }
-automaton `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlPairs` (val arg0: `org.yaml.snakeyaml.constructor.SafeConstructor`) : `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlPairs` {
-    val this$0: `org.yaml.snakeyaml.constructor.SafeConstructor`;
+automaton org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlPairs (val arg0: org.yaml.snakeyaml.constructor.SafeConstructor) : org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlPairs {
+    val this$0: org.yaml.snakeyaml.constructor.SafeConstructor;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.constructor.SafeConstructor): void;
+    
     fun construct(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Object;
 }
-automaton `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlSeq` (val arg0: `org.yaml.snakeyaml.constructor.SafeConstructor`) : `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlSeq` {
-    val this$0: `org.yaml.snakeyaml.constructor.SafeConstructor`;
+automaton org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlSeq (val arg0: org.yaml.snakeyaml.constructor.SafeConstructor) : org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlSeq {
+    val this$0: org.yaml.snakeyaml.constructor.SafeConstructor;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.constructor.SafeConstructor): void;
+    
     fun construct(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Object;
     
     fun construct2ndStep(arg0: org.yaml.snakeyaml.nodes.Node, arg1: java.lang.Object): void;
 }
-automaton `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlSet` (val arg0: `org.yaml.snakeyaml.constructor.SafeConstructor`) : `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlSet` {
-    val this$0: `org.yaml.snakeyaml.constructor.SafeConstructor`;
+automaton org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlSet (val arg0: org.yaml.snakeyaml.constructor.SafeConstructor) : org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlSet {
+    val this$0: org.yaml.snakeyaml.constructor.SafeConstructor;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.constructor.SafeConstructor): void;
+    
     fun construct(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Object;
     
     fun construct2ndStep(arg0: org.yaml.snakeyaml.nodes.Node, arg1: java.lang.Object): void;
 }
-automaton `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlStr` (val arg0: `org.yaml.snakeyaml.constructor.SafeConstructor`) : `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlStr` {
-    val this$0: `org.yaml.snakeyaml.constructor.SafeConstructor`;
+automaton org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlStr (val arg0: org.yaml.snakeyaml.constructor.SafeConstructor) : org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlStr {
+    val this$0: org.yaml.snakeyaml.constructor.SafeConstructor;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.constructor.SafeConstructor): void;
+    
     fun construct(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Object;
 }
-automaton `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlTimestamp` : `org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlTimestamp` {
+automaton org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlTimestamp : org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlTimestamp {
     val calendar: java.util.Calendar;
+    constructor `constructor`(): void;
+    
     fun construct(arg0: org.yaml.snakeyaml.nodes.Node): java.lang.Object {
         assigns calendar;
     }
@@ -3957,6 +4387,8 @@ automaton org.yaml.snakeyaml.representer.SafeRepresenter (val arg0: org.yaml.sna
     val timeZone: java.util.TimeZone;
     val nonPrintableStyle: org.yaml.snakeyaml.DumperOptions$NonPrintableStyle;
     val MULTILINE_PATTERN: java.util.regex.Pattern;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.DumperOptions): void;
+    
     fun access$000(): java.util.regex.Pattern;
     
     fun addClassTag(arg0: java.lang.Class, arg1: org.yaml.snakeyaml.nodes.Tag): org.yaml.snakeyaml.nodes.Tag;
@@ -3975,50 +4407,74 @@ automaton org.yaml.snakeyaml.representer.SafeRepresenter (val arg0: org.yaml.sna
 }
 automaton org.yaml.snakeyaml.representer.SafeRepresenter$IteratorWrapper (val arg0: java.util.Iterator) : org.yaml.snakeyaml.representer.SafeRepresenter$IteratorWrapper {
     val iter: java.util.Iterator;
+    constructor `constructor`(arg0: java.util.Iterator): void;
+    
     fun iterator(): java.util.Iterator;
 }
 automaton org.yaml.snakeyaml.representer.SafeRepresenter$RepresentArray (val arg0: org.yaml.snakeyaml.representer.SafeRepresenter) : org.yaml.snakeyaml.representer.SafeRepresenter$RepresentArray {
     val this$0: org.yaml.snakeyaml.representer.SafeRepresenter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.representer.SafeRepresenter): void;
+    
     fun representData(arg0: java.lang.Object): org.yaml.snakeyaml.nodes.Node;
 }
 automaton org.yaml.snakeyaml.representer.SafeRepresenter$RepresentBoolean (val arg0: org.yaml.snakeyaml.representer.SafeRepresenter) : org.yaml.snakeyaml.representer.SafeRepresenter$RepresentBoolean {
     val this$0: org.yaml.snakeyaml.representer.SafeRepresenter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.representer.SafeRepresenter): void;
+    
     fun representData(arg0: java.lang.Object): org.yaml.snakeyaml.nodes.Node;
 }
 automaton org.yaml.snakeyaml.representer.SafeRepresenter$RepresentByteArray (val arg0: org.yaml.snakeyaml.representer.SafeRepresenter) : org.yaml.snakeyaml.representer.SafeRepresenter$RepresentByteArray {
     val this$0: org.yaml.snakeyaml.representer.SafeRepresenter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.representer.SafeRepresenter): void;
+    
     fun representData(arg0: java.lang.Object): org.yaml.snakeyaml.nodes.Node;
 }
 automaton org.yaml.snakeyaml.representer.SafeRepresenter$RepresentDate (val arg0: org.yaml.snakeyaml.representer.SafeRepresenter) : org.yaml.snakeyaml.representer.SafeRepresenter$RepresentDate {
     val this$0: org.yaml.snakeyaml.representer.SafeRepresenter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.representer.SafeRepresenter): void;
+    
     fun representData(arg0: java.lang.Object): org.yaml.snakeyaml.nodes.Node;
 }
 automaton org.yaml.snakeyaml.representer.SafeRepresenter$RepresentEnum (val arg0: org.yaml.snakeyaml.representer.SafeRepresenter) : org.yaml.snakeyaml.representer.SafeRepresenter$RepresentEnum {
     val this$0: org.yaml.snakeyaml.representer.SafeRepresenter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.representer.SafeRepresenter): void;
+    
     fun representData(arg0: java.lang.Object): org.yaml.snakeyaml.nodes.Node;
 }
 automaton org.yaml.snakeyaml.representer.SafeRepresenter$RepresentIterator (val arg0: org.yaml.snakeyaml.representer.SafeRepresenter) : org.yaml.snakeyaml.representer.SafeRepresenter$RepresentIterator {
     val this$0: org.yaml.snakeyaml.representer.SafeRepresenter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.representer.SafeRepresenter): void;
+    
     fun representData(arg0: java.lang.Object): org.yaml.snakeyaml.nodes.Node;
 }
 automaton org.yaml.snakeyaml.representer.SafeRepresenter$RepresentList (val arg0: org.yaml.snakeyaml.representer.SafeRepresenter) : org.yaml.snakeyaml.representer.SafeRepresenter$RepresentList {
     val this$0: org.yaml.snakeyaml.representer.SafeRepresenter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.representer.SafeRepresenter): void;
+    
     fun representData(arg0: java.lang.Object): org.yaml.snakeyaml.nodes.Node;
 }
 automaton org.yaml.snakeyaml.representer.SafeRepresenter$RepresentMap (val arg0: org.yaml.snakeyaml.representer.SafeRepresenter) : org.yaml.snakeyaml.representer.SafeRepresenter$RepresentMap {
     val this$0: org.yaml.snakeyaml.representer.SafeRepresenter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.representer.SafeRepresenter): void;
+    
     fun representData(arg0: java.lang.Object): org.yaml.snakeyaml.nodes.Node;
 }
 automaton org.yaml.snakeyaml.representer.SafeRepresenter$RepresentNull (val arg0: org.yaml.snakeyaml.representer.SafeRepresenter) : org.yaml.snakeyaml.representer.SafeRepresenter$RepresentNull {
     val this$0: org.yaml.snakeyaml.representer.SafeRepresenter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.representer.SafeRepresenter): void;
+    
     fun representData(arg0: java.lang.Object): org.yaml.snakeyaml.nodes.Node;
 }
 automaton org.yaml.snakeyaml.representer.SafeRepresenter$RepresentNumber (val arg0: org.yaml.snakeyaml.representer.SafeRepresenter) : org.yaml.snakeyaml.representer.SafeRepresenter$RepresentNumber {
     val this$0: org.yaml.snakeyaml.representer.SafeRepresenter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.representer.SafeRepresenter): void;
+    
     fun representData(arg0: java.lang.Object): org.yaml.snakeyaml.nodes.Node;
 }
 automaton org.yaml.snakeyaml.representer.SafeRepresenter$RepresentPrimitiveArray (val arg0: org.yaml.snakeyaml.representer.SafeRepresenter) : org.yaml.snakeyaml.representer.SafeRepresenter$RepresentPrimitiveArray {
     val this$0: org.yaml.snakeyaml.representer.SafeRepresenter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.representer.SafeRepresenter): void;
+    
     fun asBooleanList(arg0: java.lang.Object): java.util.List;
     
     fun asByteList(arg0: java.lang.Object): java.util.List;
@@ -4039,14 +4495,20 @@ automaton org.yaml.snakeyaml.representer.SafeRepresenter$RepresentPrimitiveArray
 }
 automaton org.yaml.snakeyaml.representer.SafeRepresenter$RepresentSet (val arg0: org.yaml.snakeyaml.representer.SafeRepresenter) : org.yaml.snakeyaml.representer.SafeRepresenter$RepresentSet {
     val this$0: org.yaml.snakeyaml.representer.SafeRepresenter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.representer.SafeRepresenter): void;
+    
     fun representData(arg0: java.lang.Object): org.yaml.snakeyaml.nodes.Node;
 }
 automaton org.yaml.snakeyaml.representer.SafeRepresenter$RepresentString (val arg0: org.yaml.snakeyaml.representer.SafeRepresenter) : org.yaml.snakeyaml.representer.SafeRepresenter$RepresentString {
     val this$0: org.yaml.snakeyaml.representer.SafeRepresenter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.representer.SafeRepresenter): void;
+    
     fun representData(arg0: java.lang.Object): org.yaml.snakeyaml.nodes.Node;
 }
 automaton org.yaml.snakeyaml.representer.SafeRepresenter$RepresentUuid (val arg0: org.yaml.snakeyaml.representer.SafeRepresenter) : org.yaml.snakeyaml.representer.SafeRepresenter$RepresentUuid {
     val this$0: org.yaml.snakeyaml.representer.SafeRepresenter;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.representer.SafeRepresenter): void;
+    
     fun representData(arg0: java.lang.Object): org.yaml.snakeyaml.nodes.Node;
 }
 automaton org.yaml.snakeyaml.emitter.ScalarAnalysis (val arg0: java.lang.String, val arg1: bool, val arg2: bool, val arg3: bool, val arg4: bool, val arg5: bool, val arg6: bool) : org.yaml.snakeyaml.emitter.ScalarAnalysis {
@@ -4057,6 +4519,8 @@ automaton org.yaml.snakeyaml.emitter.ScalarAnalysis (val arg0: java.lang.String,
     val allowBlockPlain: bool;
     val allowSingleQuoted: bool;
     val allowBlock: bool;
+    constructor `constructor`(arg0: java.lang.String, arg1: bool, arg2: bool, arg3: bool, arg4: bool, arg5: bool, arg6: bool): void;
+    
     fun getScalar(): java.lang.String;
     
     fun isAllowBlock(): bool;
@@ -4076,6 +4540,8 @@ automaton org.yaml.snakeyaml.events.ScalarEvent (val arg0: java.lang.String, val
     val style: org.yaml.snakeyaml.DumperOptions$ScalarStyle;
     val value: java.lang.String;
     val implicit: org.yaml.snakeyaml.events.ImplicitTuple;
+    constructor `constructor`(arg0: java.lang.String, arg1: java.lang.String, arg2: org.yaml.snakeyaml.events.ImplicitTuple, arg3: java.lang.String, arg4: org.yaml.snakeyaml.error.Mark, arg5: org.yaml.snakeyaml.error.Mark, arg6: org.yaml.snakeyaml.DumperOptions$ScalarStyle): void;
+    
     fun getArguments(): java.lang.String;
     
     fun getEventId(): org.yaml.snakeyaml.events.Event$ID;
@@ -4093,6 +4559,10 @@ automaton org.yaml.snakeyaml.events.ScalarEvent (val arg0: java.lang.String, val
 automaton org.yaml.snakeyaml.nodes.ScalarNode (val arg0: org.yaml.snakeyaml.nodes.Tag, val arg1: java.lang.String, val arg2: org.yaml.snakeyaml.error.Mark, val arg3: org.yaml.snakeyaml.error.Mark, val arg4: org.yaml.snakeyaml.DumperOptions$ScalarStyle) : org.yaml.snakeyaml.nodes.ScalarNode {
     val style: org.yaml.snakeyaml.DumperOptions$ScalarStyle;
     val value: java.lang.String;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.nodes.Tag, arg1: java.lang.String, arg2: org.yaml.snakeyaml.error.Mark, arg3: org.yaml.snakeyaml.error.Mark, arg4: org.yaml.snakeyaml.DumperOptions$ScalarStyle): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.nodes.Tag, arg1: bool, arg2: java.lang.String, arg3: org.yaml.snakeyaml.error.Mark, arg4: org.yaml.snakeyaml.error.Mark, arg5: org.yaml.snakeyaml.DumperOptions$ScalarStyle): void;
+    
     fun getNodeId(): org.yaml.snakeyaml.nodes.NodeId;
     
     fun getScalarStyle(): org.yaml.snakeyaml.DumperOptions$ScalarStyle;
@@ -4107,6 +4577,10 @@ automaton org.yaml.snakeyaml.tokens.ScalarToken (val arg0: java.lang.String, val
     val value: java.lang.String;
     val plain: bool;
     val style: org.yaml.snakeyaml.DumperOptions$ScalarStyle;
+    constructor `constructor`(arg0: java.lang.String, arg1: org.yaml.snakeyaml.error.Mark, arg2: org.yaml.snakeyaml.error.Mark, arg3: bool): void;
+    
+    constructor `constructor`(arg0: java.lang.String, arg1: bool, arg2: org.yaml.snakeyaml.error.Mark, arg3: org.yaml.snakeyaml.error.Mark, arg4: org.yaml.snakeyaml.DumperOptions$ScalarStyle): void;
+    
     fun getPlain(): bool;
     
     fun getStyle(): org.yaml.snakeyaml.DumperOptions$ScalarStyle;
@@ -4124,6 +4598,10 @@ automaton org.yaml.snakeyaml.scanner.Scanner : org.yaml.snakeyaml.scanner.Scanne
 }
 automaton org.yaml.snakeyaml.scanner.ScannerException (val arg0: java.lang.String, val arg1: org.yaml.snakeyaml.error.Mark, val arg2: java.lang.String, val arg3: org.yaml.snakeyaml.error.Mark, val arg4: java.lang.String) : org.yaml.snakeyaml.scanner.ScannerException {
     val serialVersionUID: long;
+    constructor `constructor`(arg0: java.lang.String, arg1: org.yaml.snakeyaml.error.Mark, arg2: java.lang.String, arg3: org.yaml.snakeyaml.error.Mark, arg4: java.lang.String): void;
+    
+    constructor `constructor`(arg0: java.lang.String, arg1: org.yaml.snakeyaml.error.Mark, arg2: java.lang.String, arg3: org.yaml.snakeyaml.error.Mark): void;
+    
 }
 automaton org.yaml.snakeyaml.scanner.ScannerImpl (val arg0: org.yaml.snakeyaml.reader.StreamReader, val arg1: org.yaml.snakeyaml.LoaderOptions) : org.yaml.snakeyaml.scanner.ScannerImpl {
     val NOT_HEXA: java.util.regex.Pattern;
@@ -4141,6 +4619,10 @@ automaton org.yaml.snakeyaml.scanner.ScannerImpl (val arg0: org.yaml.snakeyaml.r
     val loaderOptions: org.yaml.snakeyaml.LoaderOptions;
     val allowSimpleKey: bool;
     val possibleSimpleKeys: java.util.Map;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.reader.StreamReader, arg1: org.yaml.snakeyaml.LoaderOptions): void {
+        assigns lastToken;
+    }
+    
     fun addAllTokens(arg0: java.util.List): void {
         assigns lastToken;
     }
@@ -4434,6 +4916,8 @@ automaton org.yaml.snakeyaml.scanner.ScannerImpl (val arg0: org.yaml.snakeyaml.r
 automaton org.yaml.snakeyaml.scanner.ScannerImpl$Chomping (val arg0: bool, val arg1: int) : org.yaml.snakeyaml.scanner.ScannerImpl$Chomping {
     val value: bool;
     val increment: int;
+    constructor `constructor`(arg0: bool, arg1: int): void;
+    
     fun chompTailIsNotFalse(): bool;
     
     fun chompTailIsTrue(): bool;
@@ -4441,10 +4925,16 @@ automaton org.yaml.snakeyaml.scanner.ScannerImpl$Chomping (val arg0: bool, val a
     fun getIncrement(): int;
 }
 automaton org.yaml.snakeyaml.events.SequenceEndEvent (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.events.SequenceEndEvent {
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getEventId(): org.yaml.snakeyaml.events.Event$ID;
 }
 automaton org.yaml.snakeyaml.nodes.SequenceNode (val arg0: org.yaml.snakeyaml.nodes.Tag, val arg1: bool, val arg2: java.util.List, val arg3: org.yaml.snakeyaml.error.Mark, val arg4: org.yaml.snakeyaml.error.Mark, val arg5: org.yaml.snakeyaml.DumperOptions$FlowStyle) : org.yaml.snakeyaml.nodes.SequenceNode {
     val value: java.util.List;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.nodes.Tag, arg1: bool, arg2: java.util.List, arg3: org.yaml.snakeyaml.error.Mark, arg4: org.yaml.snakeyaml.error.Mark, arg5: org.yaml.snakeyaml.DumperOptions$FlowStyle): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.nodes.Tag, arg1: java.util.List, arg2: org.yaml.snakeyaml.DumperOptions$FlowStyle): void;
+    
     fun getNodeId(): org.yaml.snakeyaml.nodes.NodeId;
     
     fun getValue(): java.util.List;
@@ -4454,6 +4944,8 @@ automaton org.yaml.snakeyaml.nodes.SequenceNode (val arg0: org.yaml.snakeyaml.no
     fun toString(): java.lang.String;
 }
 automaton org.yaml.snakeyaml.events.SequenceStartEvent (val arg0: java.lang.String, val arg1: java.lang.String, val arg2: bool, val arg3: org.yaml.snakeyaml.error.Mark, val arg4: org.yaml.snakeyaml.error.Mark, val arg5: org.yaml.snakeyaml.DumperOptions$FlowStyle) : org.yaml.snakeyaml.events.SequenceStartEvent {
+    constructor `constructor`(arg0: java.lang.String, arg1: java.lang.String, arg2: bool, arg3: org.yaml.snakeyaml.error.Mark, arg4: org.yaml.snakeyaml.error.Mark, arg5: org.yaml.snakeyaml.DumperOptions$FlowStyle): void;
+    
     fun getEventId(): org.yaml.snakeyaml.events.Event$ID;
 }
 automaton org.yaml.snakeyaml.serializer.Serializer (val arg0: org.yaml.snakeyaml.emitter.Emitable, val arg1: org.yaml.snakeyaml.resolver.Resolver, val arg2: org.yaml.snakeyaml.DumperOptions, val arg3: org.yaml.snakeyaml.nodes.Tag) : org.yaml.snakeyaml.serializer.Serializer {
@@ -4468,6 +4960,8 @@ automaton org.yaml.snakeyaml.serializer.Serializer (val arg0: org.yaml.snakeyaml
     val anchorGenerator: org.yaml.snakeyaml.serializer.AnchorGenerator;
     val closed: bool;
     val explicitRoot: org.yaml.snakeyaml.nodes.Tag;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.emitter.Emitable, arg1: org.yaml.snakeyaml.resolver.Resolver, arg2: org.yaml.snakeyaml.DumperOptions, arg3: org.yaml.snakeyaml.nodes.Tag): void;
+    
     fun anchorNode(arg0: org.yaml.snakeyaml.nodes.Node): void;
     
     fun close(): void {
@@ -4494,6 +4988,8 @@ automaton org.yaml.snakeyaml.serializer.Serializer$1 : org.yaml.snakeyaml.serial
 }
 automaton org.yaml.snakeyaml.serializer.SerializerException (val arg0: java.lang.String) : org.yaml.snakeyaml.serializer.SerializerException {
     val serialVersionUID: long;
+    constructor `constructor`(arg0: java.lang.String): void;
+    
 }
 automaton org.yaml.snakeyaml.scanner.SimpleKey (val arg0: int, val arg1: bool, val arg2: int, val arg3: int, val arg4: int, val arg5: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.scanner.SimpleKey {
     val tokenNumber: int;
@@ -4502,6 +4998,8 @@ automaton org.yaml.snakeyaml.scanner.SimpleKey (val arg0: int, val arg1: bool, v
     val line: int;
     val column: int;
     val mark: org.yaml.snakeyaml.error.Mark;
+    constructor `constructor`(arg0: int, arg1: bool, arg2: int, arg3: int, arg4: int, arg5: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getColumn(): int;
     
     fun getIndex(): int;
@@ -4517,9 +5015,13 @@ automaton org.yaml.snakeyaml.scanner.SimpleKey (val arg0: int, val arg1: bool, v
     fun toString(): java.lang.String;
 }
 automaton org.yaml.snakeyaml.events.StreamEndEvent (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.events.StreamEndEvent {
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getEventId(): org.yaml.snakeyaml.events.Event$ID;
 }
 automaton org.yaml.snakeyaml.tokens.StreamEndToken (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.tokens.StreamEndToken {
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getTokenId(): org.yaml.snakeyaml.tokens.Token$ID;
 }
 automaton org.yaml.snakeyaml.reader.StreamReader (val arg0: java.lang.String) : org.yaml.snakeyaml.reader.StreamReader {
@@ -4534,6 +5036,10 @@ automaton org.yaml.snakeyaml.reader.StreamReader (val arg0: java.lang.String) : 
     val column: int;
     val buffer: array<char>;
     val BUFFER_SIZE: int;
+    constructor `constructor`(arg0: java.lang.String): void;
+    
+    constructor `constructor`(arg0: java.io.Reader): void;
+    
     fun ensureEnoughData(): bool {
         assigns dataWindow;
         assigns eof;
@@ -4618,9 +5124,13 @@ automaton org.yaml.snakeyaml.reader.StreamReader (val arg0: java.lang.String) : 
     }
 }
 automaton org.yaml.snakeyaml.events.StreamStartEvent (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.events.StreamStartEvent {
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getEventId(): org.yaml.snakeyaml.events.Event$ID;
 }
 automaton org.yaml.snakeyaml.tokens.StreamStartToken (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.tokens.StreamStartToken {
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getTokenId(): org.yaml.snakeyaml.tokens.Token$ID;
 }
 automaton org.yaml.snakeyaml.nodes.Tag (val arg0: java.lang.String) : org.yaml.snakeyaml.nodes.Tag {
@@ -4644,6 +5154,10 @@ automaton org.yaml.snakeyaml.nodes.Tag (val arg0: java.lang.String) : org.yaml.s
     val COMPATIBILITY_MAP: java.util.Map;
     val value: java.lang.String;
     val secondary: bool;
+    constructor `constructor`(arg0: java.lang.String): void;
+    
+    constructor `constructor`(arg0: java.lang.Class): void;
+    
     fun equals(arg0: java.lang.Object): bool;
     
     fun getClassName(): java.lang.String;
@@ -4689,6 +5203,8 @@ automaton org.yaml.snakeyaml.inspector.TagInspector : org.yaml.snakeyaml.inspect
 }
 automaton org.yaml.snakeyaml.tokens.TagToken (val arg0: org.yaml.snakeyaml.tokens.TagTuple, val arg1: org.yaml.snakeyaml.error.Mark, val arg2: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.tokens.TagToken {
     val value: org.yaml.snakeyaml.tokens.TagTuple;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.tokens.TagTuple, arg1: org.yaml.snakeyaml.error.Mark, arg2: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getTokenId(): org.yaml.snakeyaml.tokens.Token$ID;
     
     fun getValue(): org.yaml.snakeyaml.tokens.TagTuple;
@@ -4696,6 +5212,8 @@ automaton org.yaml.snakeyaml.tokens.TagToken (val arg0: org.yaml.snakeyaml.token
 automaton org.yaml.snakeyaml.tokens.TagTuple (val arg0: java.lang.String, val arg1: java.lang.String) : org.yaml.snakeyaml.tokens.TagTuple {
     val handle: java.lang.String;
     val suffix: java.lang.String;
+    constructor `constructor`(arg0: java.lang.String, arg1: java.lang.String): void;
+    
     fun getHandle(): java.lang.String;
     
     fun getSuffix(): java.lang.String;
@@ -4703,6 +5221,8 @@ automaton org.yaml.snakeyaml.tokens.TagTuple (val arg0: java.lang.String, val ar
 automaton org.yaml.snakeyaml.tokens.Token (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.tokens.Token {
     val startMark: org.yaml.snakeyaml.error.Mark;
     val endMark: org.yaml.snakeyaml.error.Mark;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getEndMark(): org.yaml.snakeyaml.error.Mark;
     
     fun getStartMark(): org.yaml.snakeyaml.error.Mark;
@@ -4735,6 +5255,8 @@ automaton org.yaml.snakeyaml.tokens.Token$ID (val arg0: java.lang.String, val ar
     val Error: org.yaml.snakeyaml.tokens.Token$ID;
     val description: java.lang.String;
     val $VALUES: array<org.yaml.snakeyaml.tokens.Token$ID>;
+    constructor `constructor`(arg0: java.lang.String, arg1: int, arg2: java.lang.String): void;
+    
     fun `static-constructor`(): void {
         assigns Alias;
         assigns Anchor;
@@ -4770,9 +5292,13 @@ automaton org.yaml.snakeyaml.tokens.Token$ID (val arg0: java.lang.String, val ar
 }
 automaton org.yaml.snakeyaml.inspector.TrustedPrefixesTagInspector (val arg0: java.util.List) : org.yaml.snakeyaml.inspector.TrustedPrefixesTagInspector {
     val trustedList: java.util.List;
+    constructor `constructor`(arg0: java.util.List): void;
+    
     fun isGlobalTagAllowed(arg0: org.yaml.snakeyaml.nodes.Tag): bool;
 }
 automaton org.yaml.snakeyaml.inspector.TrustedTagInspector : org.yaml.snakeyaml.inspector.TrustedTagInspector {
+    constructor `constructor`(): void;
+    
     fun isGlobalTagAllowed(arg0: org.yaml.snakeyaml.nodes.Tag): bool;
 }
 automaton org.yaml.snakeyaml.TypeDescription (val arg0: java.lang.Class, val arg1: org.yaml.snakeyaml.nodes.Tag) : org.yaml.snakeyaml.TypeDescription {
@@ -4787,6 +5313,16 @@ automaton org.yaml.snakeyaml.TypeDescription (val arg0: java.lang.Class, val arg
     val excludes: java.util.Set;
     val includes: array<java.lang.String>;
     val beanAccess: org.yaml.snakeyaml.introspector.BeanAccess;
+    constructor `constructor`(arg0: java.lang.Class, arg1: org.yaml.snakeyaml.nodes.Tag): void;
+    
+    constructor `constructor`(arg0: java.lang.Class, arg1: org.yaml.snakeyaml.nodes.Tag, arg2: java.lang.Class): void;
+    
+    constructor `constructor`(arg0: java.lang.Class, arg1: java.lang.String): void;
+    
+    constructor `constructor`(arg0: java.lang.Class): void;
+    
+    constructor `constructor`(arg0: java.lang.Class, arg1: java.lang.Class): void;
+    
     fun addPropertyParameters(arg0: java.lang.String, arg1: array): void {
         assigns properties;
     }
@@ -4862,12 +5398,16 @@ automaton org.yaml.snakeyaml.TypeDescription (val arg0: java.lang.Class, val arg
     fun toString(): java.lang.String;
 }
 automaton org.yaml.snakeyaml.inspector.UnTrustedTagInspector : org.yaml.snakeyaml.inspector.UnTrustedTagInspector {
+    constructor `constructor`(): void;
+    
     fun isGlobalTagAllowed(arg0: org.yaml.snakeyaml.nodes.Tag): bool;
 }
 automaton org.yaml.snakeyaml.external.com.google.gdata.util.common.base.UnicodeEscaper : org.yaml.snakeyaml.external.com.google.gdata.util.common.base.UnicodeEscaper {
     val DEST_PAD: int;
     val DEST_TL: java.lang.ThreadLocal;
     val $assertionsDisabled: bool;
+    constructor `constructor`(): void;
+    
     fun codePointAt(arg0: java.lang.CharSequence, arg1: int, arg2: int): int;
     
     fun escape(arg0: int): array<char>;
@@ -4892,6 +5432,8 @@ automaton org.yaml.snakeyaml.external.com.google.gdata.util.common.base.UnicodeE
     val decodedChars: array<char>;
     val val$out: java.lang.Appendable;
     val this$0: org.yaml.snakeyaml.external.com.google.gdata.util.common.base.UnicodeEscaper;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.external.com.google.gdata.util.common.base.UnicodeEscaper, arg1: java.lang.Appendable): void;
+    
     fun append(arg0: java.lang.CharSequence): java.lang.Appendable {
         assigns pendingHighSurrogate;
     }
@@ -4905,6 +5447,8 @@ automaton org.yaml.snakeyaml.external.com.google.gdata.util.common.base.UnicodeE
     fun outputChars(arg0: array, arg1: int): void;
 }
 automaton org.yaml.snakeyaml.external.com.google.gdata.util.common.base.UnicodeEscaper$2 : org.yaml.snakeyaml.external.com.google.gdata.util.common.base.UnicodeEscaper$2 {
+    constructor `constructor`(): void;
+    
     fun initialValue(): array<char>;
     
     fun initialValue(): java.lang.Object;
@@ -4916,6 +5460,8 @@ automaton org.yaml.snakeyaml.reader.UnicodeReader (val arg0: java.io.InputStream
     val internalIn: java.io.PushbackInputStream;
     val internalIn2: java.io.InputStreamReader;
     val BOM_SIZE: int;
+    constructor `constructor`(arg0: java.io.InputStream): void;
+    
     fun close(): void {
         assigns internalIn2;
     }
@@ -4940,6 +5486,8 @@ automaton org.yaml.snakeyaml.util.UriEncoder : org.yaml.snakeyaml.util.UriEncode
     val UTF8Decoder: java.nio.charset.CharsetDecoder;
     val SAFE_CHARS: java.lang.String;
     val escaper: org.yaml.snakeyaml.external.com.google.gdata.util.common.base.Escaper;
+    constructor `constructor`(): void;
+    
     fun decode(arg0: java.nio.ByteBuffer): java.lang.String;
     
     fun decode(arg0: java.lang.String): java.lang.String;
@@ -4952,11 +5500,15 @@ automaton org.yaml.snakeyaml.util.UriEncoder : org.yaml.snakeyaml.util.UriEncode
     }
 }
 automaton org.yaml.snakeyaml.tokens.ValueToken (val arg0: org.yaml.snakeyaml.error.Mark, val arg1: org.yaml.snakeyaml.error.Mark) : org.yaml.snakeyaml.tokens.ValueToken {
+    constructor `constructor`(arg0: org.yaml.snakeyaml.error.Mark, arg1: org.yaml.snakeyaml.error.Mark): void;
+    
     fun getTokenId(): org.yaml.snakeyaml.tokens.Token$ID;
 }
 automaton org.yaml.snakeyaml.parser.VersionTagsTuple (val arg0: org.yaml.snakeyaml.DumperOptions$Version, val arg1: java.util.Map) : org.yaml.snakeyaml.parser.VersionTagsTuple {
     val `version`: org.yaml.snakeyaml.DumperOptions$Version;
     val tags: java.util.Map;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.DumperOptions$Version, arg1: java.util.Map): void;
+    
     fun getTags(): java.util.Map;
     
     fun getVersion(): org.yaml.snakeyaml.DumperOptions$Version;
@@ -4965,14 +5517,42 @@ automaton org.yaml.snakeyaml.parser.VersionTagsTuple (val arg0: org.yaml.snakeya
 }
 automaton org.yaml.snakeyaml.error.YAMLException (val arg0: java.lang.String) : org.yaml.snakeyaml.error.YAMLException {
     val serialVersionUID: long;
+    constructor `constructor`(arg0: java.lang.String): void;
+    
+    constructor `constructor`(arg0: java.lang.Throwable): void;
+    
+    constructor `constructor`(arg0: java.lang.String, arg1: java.lang.Throwable): void;
+    
 }
 automaton org.yaml.snakeyaml.Yaml : org.yaml.snakeyaml.Yaml {
     val resolver: org.yaml.snakeyaml.resolver.Resolver;
     val name: java.lang.String;
-    val `constructor`: `org.yaml.snakeyaml.constructor.BaseConstructor`;
+    val `constructor`: org.yaml.snakeyaml.constructor.BaseConstructor;
     val representer: org.yaml.snakeyaml.representer.Representer;
     val dumperOptions: org.yaml.snakeyaml.DumperOptions;
     val loadingConfig: org.yaml.snakeyaml.LoaderOptions;
+    constructor `constructor`(): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.DumperOptions): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.LoaderOptions): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.representer.Representer): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.constructor.BaseConstructor): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.constructor.BaseConstructor, arg1: org.yaml.snakeyaml.representer.Representer): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.representer.Representer, arg1: org.yaml.snakeyaml.DumperOptions): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.constructor.BaseConstructor, arg1: org.yaml.snakeyaml.representer.Representer, arg2: org.yaml.snakeyaml.DumperOptions): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.constructor.BaseConstructor, arg1: org.yaml.snakeyaml.representer.Representer, arg2: org.yaml.snakeyaml.DumperOptions, arg3: org.yaml.snakeyaml.LoaderOptions): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.constructor.BaseConstructor, arg1: org.yaml.snakeyaml.representer.Representer, arg2: org.yaml.snakeyaml.DumperOptions, arg3: org.yaml.snakeyaml.resolver.Resolver): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.constructor.BaseConstructor, arg1: org.yaml.snakeyaml.representer.Representer, arg2: org.yaml.snakeyaml.DumperOptions, arg3: org.yaml.snakeyaml.LoaderOptions, arg4: org.yaml.snakeyaml.resolver.Resolver): void;
+    
     fun addImplicitResolver(arg0: org.yaml.snakeyaml.nodes.Tag, arg1: java.util.regex.Pattern, arg2: java.lang.String): void;
     
     fun addImplicitResolver(arg0: org.yaml.snakeyaml.nodes.Tag, arg1: java.util.regex.Pattern, arg2: java.lang.String, arg3: int): void;
@@ -5047,6 +5627,8 @@ automaton org.yaml.snakeyaml.Yaml : org.yaml.snakeyaml.Yaml {
 }
 automaton org.yaml.snakeyaml.Yaml$1 (val arg0: org.yaml.snakeyaml.Yaml) : org.yaml.snakeyaml.Yaml$1 {
     val this$0: org.yaml.snakeyaml.Yaml;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.Yaml): void;
+    
     fun hasNext(): bool;
     
     fun next(): java.lang.Object;
@@ -5056,6 +5638,8 @@ automaton org.yaml.snakeyaml.Yaml$1 (val arg0: org.yaml.snakeyaml.Yaml) : org.ya
 automaton org.yaml.snakeyaml.Yaml$2 (val arg0: org.yaml.snakeyaml.Yaml, val arg1: org.yaml.snakeyaml.composer.Composer) : org.yaml.snakeyaml.Yaml$2 {
     val val$composer: org.yaml.snakeyaml.composer.Composer;
     val this$0: org.yaml.snakeyaml.Yaml;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.Yaml, arg1: org.yaml.snakeyaml.composer.Composer): void;
+    
     fun hasNext(): bool;
     
     fun next(): org.yaml.snakeyaml.nodes.Node;
@@ -5067,6 +5651,8 @@ automaton org.yaml.snakeyaml.Yaml$2 (val arg0: org.yaml.snakeyaml.Yaml, val arg1
 automaton org.yaml.snakeyaml.Yaml$3 (val arg0: org.yaml.snakeyaml.Yaml, val arg1: org.yaml.snakeyaml.parser.Parser) : org.yaml.snakeyaml.Yaml$3 {
     val val$parser: org.yaml.snakeyaml.parser.Parser;
     val this$0: org.yaml.snakeyaml.Yaml;
+    constructor `constructor`(arg0: org.yaml.snakeyaml.Yaml, arg1: org.yaml.snakeyaml.parser.Parser): void;
+    
     fun hasNext(): bool;
     
     fun next(): org.yaml.snakeyaml.events.Event;
@@ -5077,21 +5663,32 @@ automaton org.yaml.snakeyaml.Yaml$3 (val arg0: org.yaml.snakeyaml.Yaml, val arg1
 }
 automaton org.yaml.snakeyaml.Yaml$EventIterable (val arg0: java.util.Iterator) : org.yaml.snakeyaml.Yaml$EventIterable {
     val iterator: java.util.Iterator;
+    constructor `constructor`(arg0: java.util.Iterator): void;
+    
     fun iterator(): java.util.Iterator;
 }
 automaton org.yaml.snakeyaml.Yaml$NodeIterable (val arg0: java.util.Iterator) : org.yaml.snakeyaml.Yaml$NodeIterable {
     val iterator: java.util.Iterator;
+    constructor `constructor`(arg0: java.util.Iterator): void;
+    
     fun iterator(): java.util.Iterator;
 }
 automaton org.yaml.snakeyaml.Yaml$SilentEmitter : org.yaml.snakeyaml.Yaml$SilentEmitter {
     val events: java.util.List;
+    constructor `constructor`(): void;
+    
+    constructor `constructor`(arg0: org.yaml.snakeyaml.Yaml$1): void;
+    
     fun emit(arg0: org.yaml.snakeyaml.events.Event): void;
     
     fun getEvents(): java.util.List;
 }
 automaton org.yaml.snakeyaml.Yaml$YamlIterable (val arg0: java.util.Iterator) : org.yaml.snakeyaml.Yaml$YamlIterable {
     val iterator: java.util.Iterator;
+    constructor `constructor`(arg0: java.util.Iterator): void;
+    
     fun iterator(): java.util.Iterator;
 }
-automaton `module-info` : `module-info` {
+automaton module-info : module-info {
 }
+

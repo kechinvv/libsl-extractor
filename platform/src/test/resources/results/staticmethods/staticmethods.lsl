@@ -1,7 +1,7 @@
 libsl "1.0.0";
 library staticmethods;
 
-import "java.lsl";
+import java.lsl;
 
 type me.vldf.lsl.test.staticmethods.A {
     stateField: int;
@@ -9,6 +9,8 @@ type me.vldf.lsl.test.staticmethods.A {
 
 automaton me.vldf.lsl.test.staticmethods.A : me.vldf.lsl.test.staticmethods.A {
     val stateField: int;
+    constructor `constructor`(): void;
+    
     fun bar(): void {
         assigns stateField;
     }
@@ -21,3 +23,4 @@ automaton me.vldf.lsl.test.staticmethods.A : me.vldf.lsl.test.staticmethods.A {
         assigns stateField;
     }
 }
+

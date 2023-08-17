@@ -1,7 +1,7 @@
 libsl "1.0.0";
 library phistatement;
 
-import "java.lsl";
+import java.lsl;
 
 type me.vldf.lsl.test.phistatement.A {
 }
@@ -11,6 +11,8 @@ type me.vldf.lsl.test.phistatement.Data {
 }
 
 automaton me.vldf.lsl.test.phistatement.A : me.vldf.lsl.test.phistatement.A {
+    constructor `constructor`(): void;
+    
     fun foo(arg0: me.vldf.lsl.test.phistatement.Data, arg1: me.vldf.lsl.test.phistatement.Data, arg2: me.vldf.lsl.test.phistatement.Data, arg3: int): void {
         assigns arg0.field;
         assigns arg1.field;
@@ -19,4 +21,7 @@ automaton me.vldf.lsl.test.phistatement.A : me.vldf.lsl.test.phistatement.A {
 }
 automaton me.vldf.lsl.test.phistatement.Data : me.vldf.lsl.test.phistatement.Data {
     val field: int;
+    constructor `constructor`(): void;
+    
 }
+

@@ -1,7 +1,7 @@
 libsl "1.0.0";
 library `annotations-23.0.0`;
 
-import "java.lsl";
+import java.lsl;
 
 type org.jetbrains.annotations.ApiStatus {
 }
@@ -189,10 +189,12 @@ type org.jetbrains.annotations.UnmodifiableView {
 type org.jetbrains.annotations.VisibleForTesting {
 }
 
-type `module-info` {
+type module-info {
 }
 
 automaton org.jetbrains.annotations.ApiStatus : org.jetbrains.annotations.ApiStatus {
+    constructor `constructor`(): void;
+    
 }
 automaton org.jetbrains.annotations.ApiStatus$AvailableSince : org.jetbrains.annotations.ApiStatus$AvailableSince {
     fun value(): java.lang.String;
@@ -209,6 +211,8 @@ automaton org.jetbrains.annotations.ApiStatus$ScheduledForRemoval : org.jetbrain
     fun inVersion(): java.lang.String;
 }
 automaton org.jetbrains.annotations.Async : org.jetbrains.annotations.Async {
+    constructor `constructor`(): void;
+    
 }
 automaton org.jetbrains.annotations.Async$Execute : org.jetbrains.annotations.Async$Execute {
 }
@@ -226,6 +230,8 @@ automaton org.jetbrains.annotations.Contract : org.jetbrains.annotations.Contrac
     fun value(): java.lang.String;
 }
 automaton org.jetbrains.annotations.Debug : org.jetbrains.annotations.Debug {
+    constructor `constructor`(): void;
+    
 }
 automaton org.jetbrains.annotations.Debug$Renderer : org.jetbrains.annotations.Debug$Renderer {
     fun childrenArray(): java.lang.String;
@@ -251,6 +257,8 @@ automaton org.intellij.lang.annotations.Flow : org.intellij.lang.annotations.Flo
 automaton org.intellij.lang.annotations.Identifier : org.intellij.lang.annotations.Identifier {
 }
 automaton org.intellij.lang.annotations.JdkConstants : org.intellij.lang.annotations.JdkConstants {
+    constructor `constructor`(): void;
+    
 }
 automaton org.intellij.lang.annotations.JdkConstants$AdjustableOrientation : org.intellij.lang.annotations.JdkConstants$AdjustableOrientation {
 }
@@ -314,6 +322,8 @@ automaton org.jetbrains.annotations.Nls$Capitalization (val arg0: java.lang.Stri
     val Title: org.jetbrains.annotations.Nls$Capitalization;
     val Sentence: org.jetbrains.annotations.Nls$Capitalization;
     val $VALUES: array<org.jetbrains.annotations.Nls$Capitalization>;
+    constructor `constructor`(arg0: java.lang.String, arg1: int): void;
+    
     fun `static-constructor`(): void {
         assigns NotSpecified;
         assigns Title;
@@ -352,6 +362,8 @@ automaton org.intellij.lang.annotations.PrintFormatPattern : org.intellij.lang.a
     val CONVERSION: java.lang.String;
     val TEXT: java.lang.String;
     val PRINT_FORMAT: java.lang.String;
+    constructor `constructor`(): void;
+    
 }
 automaton org.jetbrains.annotations.PropertyKey : org.jetbrains.annotations.PropertyKey {
     fun resourceBundle(): java.lang.String;
@@ -380,5 +392,6 @@ automaton org.jetbrains.annotations.UnmodifiableView : org.jetbrains.annotations
 }
 automaton org.jetbrains.annotations.VisibleForTesting : org.jetbrains.annotations.VisibleForTesting {
 }
-automaton `module-info` : `module-info` {
+automaton module-info : module-info {
 }
+

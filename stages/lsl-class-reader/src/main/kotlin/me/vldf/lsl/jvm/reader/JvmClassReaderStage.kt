@@ -119,19 +119,26 @@ class JvmClassReaderStage : AnalysisStage {
             val constructorArgs = mutableListOf<TypeReference>()
 
             for (argType in primaryConstructor?.argTypes ?: listOf()) {
-                val argSemanticType = argType.createLslTypeReference(automatonContext).takeIfUnresolved(getUnresolvedTypeRef(automatonContext))
+                val argSemanticType = argType.createLslTypeReference(automatonContext)
+                    .takeIfUnresolved(getUnresolvedTypeRef(automatonContext))
 
                 constructorArgs.add(argSemanticType)
             }
 
             val constructorVariables = constructorArgs.mapIndexed { index, argType ->
-                ConstructorArgument(VariableKind.VAL,"arg$index", argType)
+                ConstructorArgument(VariableKind.VAL, "arg$index", argType)
             }.toMutableList()
 
             val localFunctions = klass.methods
-                .map { method -> getLocalFunction(method, automatonContext)}
+                .map { method -> getLocalFunction(method, automatonContext, FunctionKind.FUNCTION) }
                 .sortedBy { it.name }
                 .toMutableList()
+
+            val constructors = klass.constructors
+                .map { constructor -> getLocalFunction(constructor, automatonContext, FunctionKind.CONSTRUCTOR) }
+                .sortedBy { it.name }
+                .toMutableList()
+
 
             val internalVariables = getInternalVariables(klass, automatonContext)
             internalVariables.forEach { variable -> automatonContext.storeVariable(variable) }
@@ -142,7 +149,8 @@ class JvmClassReaderStage : AnalysisStage {
                 constructorVariables = constructorVariables,
                 localFunctions = localFunctions,
                 internalVariables = internalVariables.toMutableList(),
-                context = automatonContext
+                context = automatonContext,
+                constructors = constructors
             )
 
             globalContext.storeAutomata(automaton)
@@ -150,7 +158,7 @@ class JvmClassReaderStage : AnalysisStage {
         }
     }
 
-    private fun getLocalFunction(method: Method, automatonContext: AutomatonContext): Function {
+    private fun getLocalFunction(method: Method, automatonContext: AutomatonContext, kind: FunctionKind): Function {
         val functionContext = FunctionContext(automatonContext)
 
         val functionName = method.getFunctionName()
@@ -164,7 +172,7 @@ class JvmClassReaderStage : AnalysisStage {
         val automatonRef = method.klass.createAutomatonReference(functionContext)
 
         val function = Function(
-            kind = FunctionKind.FUNCTION,
+            kind = kind,
             name = functionName,
             automatonReference = automatonRef,
             args = methodArgs,
@@ -178,7 +186,11 @@ class JvmClassReaderStage : AnalysisStage {
         return function
     }
 
-    private fun getInternalVariables(klass: ConcreteClass, automatonContext: AutomatonContext): List<VariableWithInitialValue> {
+
+    private fun getInternalVariables(
+        klass: ConcreteClass,
+        automatonContext: AutomatonContext
+    ): List<VariableWithInitialValue> {
         return buildList {
             for (field in klass.fields) {
                 val variableName = field.name

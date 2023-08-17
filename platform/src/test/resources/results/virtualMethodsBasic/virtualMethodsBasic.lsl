@@ -1,7 +1,7 @@
 libsl "1.0.0";
 library virtualMethodsBasic;
 
-import "java.lsl";
+import java.lsl;
 
 type me.vldf.lsl.test.virtualmethodsbasic.Data {
     field: int;
@@ -22,12 +22,18 @@ type me.vldf.lsl.test.virtualmethodsbasic.Main {
 
 automaton me.vldf.lsl.test.virtualmethodsbasic.Data : me.vldf.lsl.test.virtualmethodsbasic.Data {
     val field: int;
+    constructor `constructor`(): void;
+    
 }
 automaton me.vldf.lsl.test.virtualmethodsbasic.InheritorA : me.vldf.lsl.test.virtualmethodsbasic.InheritorA {
+    constructor `constructor`(): void;
+    
     fun method(): void;
 }
 automaton me.vldf.lsl.test.virtualmethodsbasic.InheritorB : me.vldf.lsl.test.virtualmethodsbasic.InheritorB {
     val data: me.vldf.lsl.test.virtualmethodsbasic.Data;
+    constructor `constructor`(): void;
+    
     fun method(): void {
         assigns data.field;
     }
@@ -36,7 +42,10 @@ automaton me.vldf.lsl.test.virtualmethodsbasic.Interface : me.vldf.lsl.test.virt
     fun method(): void;
 }
 automaton me.vldf.lsl.test.virtualmethodsbasic.Main : me.vldf.lsl.test.virtualmethodsbasic.Main {
+    constructor `constructor`(): void;
+    
     fun foo(arg0: me.vldf.lsl.test.virtualmethodsbasic.Interface): void {
         assigns arg0;
     }
 }
+

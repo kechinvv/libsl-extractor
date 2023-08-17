@@ -1,7 +1,7 @@
 libsl "1.0.0";
 library enums;
 
-import "java.lsl";
+import java.lsl;
 
 enum me.vldf.lsl.test.enums.EnumClass {
     A = 0;
@@ -14,7 +14,7 @@ automaton me.vldf.lsl.test.enums.EnumClass (val arg0: java.lang.String, val arg1
     val B: me.vldf.lsl.test.enums.EnumClass;
     val C: me.vldf.lsl.test.enums.EnumClass;
     val $VALUES: array<me.vldf.lsl.test.enums.EnumClass>;
-    fun $values(): array<me.vldf.lsl.test.enums.EnumClass>;
+    constructor `constructor`(arg0: java.lang.String, arg1: int): void;
     
     fun `static-constructor`(): void {
         assigns A;
@@ -27,3 +27,4 @@ automaton me.vldf.lsl.test.enums.EnumClass (val arg0: java.lang.String, val arg1
     
     fun values(): array<me.vldf.lsl.test.enums.EnumClass>;
 }
+
