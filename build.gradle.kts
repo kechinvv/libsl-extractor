@@ -20,6 +20,7 @@ dependencies {
     implementation(project(":stages:lsl-class-reader"))
     implementation(project(":stages:common"))
     implementation(project(":stages:assign-analysis"))
+    implementation(project(":stages:scenario-automaton"))
     implementation(project(":platform"))
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")

@@ -1,3 +1,4 @@
+import me.vladf.lsl.stages.scenario.ScenarioStage
 import me.vldf.lsl.extractor.platform.PipelineConfig
 import me.vldf.lsl.extractor.platform.pipeline.PipelineFactory
 import me.vldf.lsl.extractor.platform.platformLogger
@@ -19,7 +20,8 @@ object TestPlatform {
     private val testDataJarsParentDir = File("../testData/build/jars/")
     private val resultDir = File("./src/test/resources/results")
     private val analysisStagesFactory = {
-        listOf(JvmClassReaderStage(), AssignExtractorStage(), ExceptionsExtractorStage())
+        listOf(JvmClassReaderStage(), AssignExtractorStage(),  ScenarioStage())
+        //listOf(JvmClassReaderStage(), AssignExtractorStage(), ExceptionsExtractorStage(), ScenarioStage())
     }
 
     init {
@@ -33,6 +35,13 @@ object TestPlatform {
             PipelineConfig {
                 this.analyzingLibrariesDir = testDataClassesParentDir.resolve(testCase)
                 this.stages.addAll(analysisStagesFactory())
+
+                val refinementFile = this::class.java.getResource("/$testCase.json")
+                    ?.file
+                    ?.let { file -> File(file) }
+                    ?: return@PipelineConfig
+
+                this.refinementsFiles.add(refinementFile)
             }
         }
     }

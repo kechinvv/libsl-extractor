@@ -10,6 +10,7 @@ class PipelineConfig (builder: PipelineConfig.() -> Unit) {
 
     val stages: MutableList<AnalysisStage> = mutableListOf()
     val refinementsFiles = mutableListOf<File>()
+    val automatonFiles = mutableListOf<File>()
     val importSpecifications: MutableList<Path> = mutableListOf()
 
     init {
