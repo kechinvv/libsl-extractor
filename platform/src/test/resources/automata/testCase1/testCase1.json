@@ -1,0 +1,105 @@
+{
+    "name": "java.io.File",
+    "class": "java.io.File",
+    "shifts": [
+        {
+            "from": "6",
+            "to": "3",
+            "with": [
+                "canExecute"
+            ]
+        },
+        {
+            "from": "0",
+            "to": "4",
+            "with": [
+                "delete"
+            ]
+        },
+        {
+            "from": "0",
+            "to": "6",
+            "with": [
+                "<init>"
+            ]
+        },
+        {
+            "from": "1",
+            "to": "2",
+            "with": [
+                "createNewFile"
+            ]
+        },
+        {
+            "from": "3",
+            "to": "3",
+            "with": [
+                "getName"
+            ]
+        },
+        {
+            "from": "6",
+            "to": "1",
+            "with": [
+                "exists"
+            ]
+        },
+        {
+            "from": "2",
+            "to": "6",
+            "with": [
+                "toPath"
+            ]
+        },
+        {
+            "from": "6",
+            "to": "6",
+            "with": [
+                "getParentFile",
+                "createNewFile",
+                "listFiles",
+                "delete"
+            ]
+        },
+        {
+            "from": "3",
+            "to": "4",
+            "with": [
+                "delete"
+            ]
+        },
+        {
+            "from": "1",
+            "to": "6",
+            "with": [
+                "toPath"
+            ]
+        }
+    ],
+    "states": [
+        {
+            "name": "0",
+            "type": "INIT"
+        },
+        {
+            "name": "3",
+            "type": "DEF"
+        },
+        {
+            "name": "1",
+            "type": "DEF"
+        },
+        {
+            "name": "2",
+            "type": "DEF"
+        },
+        {
+            "name": "6",
+            "type": "DEF"
+        },
+        {
+            "name": "4",
+            "type": "FIN"
+        }
+    ]
+}

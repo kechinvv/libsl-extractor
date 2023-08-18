@@ -2,71 +2,87 @@ package me.vladf.lsl.stages.scenario
 
 import kotlinx.serialization.json.Json
 import me.vladf.lsl.stages.scenario.entities.Automaton
+import me.vladf.lsl.stages.scenario.entities.StateType
 import me.vldf.lsl.extractor.platform.AnalysisStage
 import me.vldf.lsl.extractor.platform.GlobalAnalysisContext
-import me.vldf.lsl.extractor.platform.KfgHelper.createAutomatonReference
-import me.vldf.lsl.extractor.platform.KfgHelper.lslName
+import me.vldf.lsl.extractor.platform.LibraryDescriptor
 import me.vldf.lsl.extractor.platform.platformLogger
 import me.vldf.lsl.jvm.reader.ClassManagerInitializer
-import org.jetbrains.research.libsl.context.AutomatonContext
+import org.jetbrains.research.libsl.context.LslGlobalContext
 import org.jetbrains.research.libsl.nodes.*
-import org.jetbrains.research.libsl.nodes.references.builders.AutomatonReferenceBuilder.getReference
-import org.jetbrains.research.libsl.nodes.references.builders.TypeReferenceBuilder
+import org.jetbrains.research.libsl.nodes.references.AutomatonReference
+import org.jetbrains.research.libsl.nodes.references.builders.FunctionReferenceBuilder.getReference
 import org.vorpal.research.kfg.ClassManager
-import org.vorpal.research.kfg.ir.ConcreteClass
-import java.io.File
 
 class ScenarioStage(override val name: String = "scenario-automation-stage") : AnalysisStage {
     private val logger by platformLogger()
 
     private lateinit var analysisContext: GlobalAnalysisContext
     private lateinit var classManager: ClassManager
-
-    private val classManagerInitializer by lazy {
-        ClassManagerInitializer(analysisContext)
-    }
+    private var libraryDescriptor: LibraryDescriptor? = null
+    lateinit var library: Library
+    private lateinit var globalContext: LslGlobalContext
+    lateinit var automataRef: Map<String, AutomatonReference>
 
 
     override fun run(analysisContext: GlobalAnalysisContext) {
-        val directoryContainer = analysisContext.pipelineConfig.analyzingLibrariesDir
+        if (analysisContext.pipelineConfig.automatonFiles.size == 0) return
 
         this.analysisContext = analysisContext
-//        classManager = classManagerInitializer.createClassManager(directoryContainer)
-//
-//        this.analysisContext.kfgClassManager = classManager
-//
+        libraryDescriptor = analysisContext.descriptorsToLibraries.keys.firstOrNull { descr ->
+            val anyAutomaton = analysisContext.pipelineConfig.automatonFiles.first()
+            descr.name.contains(anyAutomaton.parentFile.name)
+        }
+
+        if (libraryDescriptor == null) {
+            logger.info("no library found")
+            return
+        }
+
+        library = analysisContext.descriptorsToLibraries[libraryDescriptor]!!
+        globalContext = analysisContext.libraryHelper.getContext(libraryDescriptor!!)
+
         generateAutomata()
 
     }
 
     private fun generateAutomata() {
+
+        automataRef = library.automataReferences.associateBy { it.name }
+
         for (automatonFile in analysisContext.pipelineConfig.automatonFiles) {
-            generateAutomaton(automatonFile)
+            val automatonJson = automatonFile.readText()
+            val automatonDecoded = Json.decodeFromString<Automaton>(automatonJson)
+            val keyAutomatonReference = automataRef.keys.firstOrNull { name -> name.endsWith(automatonDecoded.`class`) }
+            if (keyAutomatonReference != null)
+                generateAutomaton(automatonDecoded, automataRef[keyAutomatonReference]!!)
         }
     }
 
-    private fun generateAutomaton(automatonFile: File) {
-        val automatonJson = automatonFile.readText()
-        val automatonDecoded = Json.decodeFromString<Automaton>(automatonJson)
+    private fun generateAutomaton(automaton: Automaton, automatonReference: AutomatonReference) {
 
-
-        val libraryDescriptor = analysisContext.descriptorsToLibraries.keys.firstOrNull { descr ->
-            descr.name.contains(automatonFile.nameWithoutExtension)
+        val states: Map<String, State> = automaton.states.associate {
+            val stateKind = when (it.type) {
+                StateType.INIT -> StateKind.INIT
+                StateType.FIN -> StateKind.FINISH
+                else -> StateKind.SIMPLE
+            }
+            it.name to State(it.name, stateKind)
         }
 
-        if (libraryDescriptor == null) {
-            logger.info("no library found for $automatonFile file")
-            return
+        val automatonLsl = automatonReference.resolve()
+        val functions = automatonLsl?.functions
+
+        val shifts: List<Shift> = automaton.shifts.map { shift ->
+            val shiftFunctions = functions?.filter { shift.with.contains(it.name) }
+            val shiftFunctionsRefs = shiftFunctions?.map { it.getReference(globalContext) }
+            Shift(states[shift.from]!!, states[shift.to]!!, shiftFunctionsRefs!!.toMutableList())
         }
 
-        val library = analysisContext.descriptorsToLibraries[libraryDescriptor]!!
-        logger.info("REFS ${library.automataReferences.size}")
-        library.automataReferences.forEach {
-            val automaton = it.resolve()
-            automaton?.states?.add(State("init", StateKind.INIT))
-        }
-
+        automatonLsl?.states?.addAll(states.values)
+        automatonLsl?.shifts?.addAll(shifts)
     }
-
 
 }
+
+

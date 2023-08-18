@@ -20,8 +20,7 @@ object TestPlatform {
     private val testDataJarsParentDir = File("../testData/build/jars/")
     private val resultDir = File("./src/test/resources/results")
     private val analysisStagesFactory = {
-        listOf(JvmClassReaderStage(), AssignExtractorStage(),  ScenarioStage())
-        //listOf(JvmClassReaderStage(), AssignExtractorStage(), ExceptionsExtractorStage(), ScenarioStage())
+        listOf(JvmClassReaderStage(), AssignExtractorStage(), ExceptionsExtractorStage(), ScenarioStage())
     }
 
     init {
@@ -41,6 +40,13 @@ object TestPlatform {
                     ?.let { file -> File(file) }
                     ?: return@PipelineConfig
 
+                val automatonFiles = this::class.java.getResource("/automata/$testCase/")
+                    ?.file
+                    ?.let { file -> File(file) }
+                    ?.listFiles()
+                    ?: return@PipelineConfig
+
+                this.automatonFiles.addAll(automatonFiles)
                 this.refinementsFiles.add(refinementFile)
             }
         }
@@ -57,6 +63,13 @@ object TestPlatform {
                     ?.let { file -> File(file) }
                     ?: return@PipelineConfig
 
+                val automatonFiles = this::class.java.getResource("/automata/$testCase/")
+                    ?.file
+                    ?.let { file -> File(file) }
+                    ?.listFiles()
+                    ?: return@PipelineConfig
+
+                this.automatonFiles.addAll(automatonFiles)
                 this.refinementsFiles.add(refinementFile)
             }
         }
