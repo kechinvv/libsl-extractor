@@ -29,51 +29,28 @@ object TestPlatform {
         }
     }
 
-    fun runForClassesDir(testCase: String) {
+    fun runForLib(testCase: String) {
         runTest(testCase) {
             PipelineConfig {
                 this.analyzingLibrariesDir = testDataClassesParentDir.resolve(testCase)
                 this.stages.addAll(analysisStagesFactory())
 
-                val refinementFile = this::class.java.getResource("/$testCase.json")
+                this::class.java.getResource("/$testCase.json")
                     ?.file
-                    ?.let { file -> File(file) }
-                    ?: return@PipelineConfig
+                    ?.let { file -> this.refinementsFiles.add(File(file)) }
+
 
                 val automatonFiles = this::class.java.getResource("/automata/$testCase/")
                     ?.file
                     ?.let { file -> File(file) }
                     ?.listFiles()
-                    ?: return@PipelineConfig
+                    ?: emptyArray()
 
                 this.automatonFiles.addAll(automatonFiles)
-                this.refinementsFiles.add(refinementFile)
             }
         }
     }
 
-    fun runForJarDir(testCase: String) {
-        runTest(testCase) {
-            PipelineConfig {
-                this.analyzingLibrariesDir = testDataJarsParentDir.resolve("$testCase/")
-                this.stages.addAll(analysisStagesFactory())
-
-                val refinementFile = this::class.java.getResource("/$testCase.json")
-                    ?.file
-                    ?.let { file -> File(file) }
-                    ?: return@PipelineConfig
-
-                val automatonFiles = this::class.java.getResource("/automata/$testCase/")
-                    ?.file
-                    ?.let { file -> File(file) }
-                    ?.listFiles()
-                    ?: return@PipelineConfig
-
-                this.automatonFiles.addAll(automatonFiles)
-                this.refinementsFiles.add(refinementFile)
-            }
-        }
-    }
 
     private fun runTest(testCaseName: String, pipelineConfigProvider: () -> PipelineConfig) {
         printSystemInfo()

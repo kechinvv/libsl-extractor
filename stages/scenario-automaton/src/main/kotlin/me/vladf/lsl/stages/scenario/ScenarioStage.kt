@@ -18,7 +18,6 @@ class ScenarioStage(override val name: String = "scenario-automation-stage") : A
     private val logger by platformLogger()
 
     private lateinit var analysisContext: GlobalAnalysisContext
-    private lateinit var classManager: ClassManager
     private var libraryDescriptor: LibraryDescriptor? = null
     lateinit var library: Library
     private lateinit var globalContext: LslGlobalContext
@@ -43,7 +42,6 @@ class ScenarioStage(override val name: String = "scenario-automation-stage") : A
         globalContext = analysisContext.libraryHelper.getContext(libraryDescriptor!!)
 
         generateAutomata()
-
     }
 
     private fun generateAutomata() {
@@ -54,6 +52,7 @@ class ScenarioStage(override val name: String = "scenario-automation-stage") : A
             val automatonJson = automatonFile.readText()
             val automatonDecoded = Json.decodeFromString<Automaton>(automatonJson)
             val keyAutomatonReference = automataRef.keys.firstOrNull { name -> name.endsWith(automatonDecoded.`class`) }
+
             if (keyAutomatonReference != null)
                 generateAutomaton(automatonDecoded, automataRef[keyAutomatonReference]!!)
         }
@@ -72,10 +71,13 @@ class ScenarioStage(override val name: String = "scenario-automation-stage") : A
 
         val automatonLsl = automatonReference.resolve()
         val functions = automatonLsl?.functions
+        val constructors = automatonLsl?.constructors
 
         val shifts: List<Shift> = automaton.shifts.map { shift ->
             val shiftFunctions = functions?.filter { shift.with.contains(it.name) }
-            val shiftFunctionsRefs = shiftFunctions?.map { it.getReference(globalContext) }
+            val shiftFunctionsRefs = shiftFunctions?.map { it.getReference(globalContext) }?.toMutableList()
+            val constructorRef = constructors?.firstOrNull { shift.with.contains(it.name) }?.getReference(globalContext)
+            if (constructorRef != null) shiftFunctionsRefs?.add(constructorRef)
             Shift(states[shift.from]!!, states[shift.to]!!, shiftFunctionsRefs!!.toMutableList())
         }
 

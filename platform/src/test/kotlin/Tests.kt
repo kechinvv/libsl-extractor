@@ -3,66 +3,71 @@ import org.junit.jupiter.api.Test
 class Tests {
     @Test
     fun testCase1() {
-        TestPlatform.runForClassesDir("testCase1")
+        TestPlatform.runForLib("testCase1")
+    }
+
+    @Test
+    fun testCase2() {
+        TestPlatform.runForLib("testCase2")
     }
 
     @Test
     fun enums() {
-        TestPlatform.runForClassesDir("enums")
+        TestPlatform.runForLib("enums")
     }
 
     @Test
     fun argAnnotations() {
-        TestPlatform.runForClassesDir("argAnnotations")
+        TestPlatform.runForLib("argAnnotations")
     }
 
     @Test
     fun controlflow() {
-        TestPlatform.runForClassesDir("controlflow")
+        TestPlatform.runForLib("controlflow")
     }
 
     @Test
     fun recursion() {
-        TestPlatform.runForClassesDir("recursion")
+        TestPlatform.runForLib("recursion")
     }
 
     @Test
     fun okHttpTest() {
-        TestPlatform.runForJarDir("okhttp")
+        TestPlatform.runForLib("okhttp")
     }
 
     @Test
     fun virtualMethodsTest() {
-        TestPlatform.runForClassesDir("virtualmethods")
+        TestPlatform.runForLib("virtualmethods")
     }
 
     @Test
     fun staticMethodsTest() {
-        TestPlatform.runForClassesDir("staticmethods")
+        TestPlatform.runForLib("staticmethods")
     }
 
     @Test
     fun phiTest() {
-        TestPlatform.runForClassesDir("phistatement")
+        TestPlatform.runForLib("phistatement")
     }
 
     @Test
     fun staticFieldsTest() {
-        TestPlatform.runForClassesDir("staticfields")
+        TestPlatform.runForLib("staticfields")
     }
 
     @Test
     fun staticMethodsAndFieldsTest() {
-        TestPlatform.runForClassesDir("staticMethodsAndFields")
+        TestPlatform.runForLib("staticMethodsAndFields")
     }
 
     @Test
     fun virtualMethodsBasicTest() {
-        TestPlatform.runForClassesDir("virtualMethodsBasic")
+        TestPlatform.runForLib("virtualMethodsBasic")
     }
 
     @Test
     fun snakeyamlTest() {
-        TestPlatform.runForJarDir("snakeyaml")
+        TestPlatform.runForLib("snakeyaml")
     }
 }
