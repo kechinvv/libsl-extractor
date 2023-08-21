@@ -2,6 +2,7 @@ package me.vladf.lsl.stages.scenario
 
 import kotlinx.serialization.json.Json
 import me.vladf.lsl.stages.scenario.entities.Automaton
+import me.vladf.lsl.stages.scenario.entities.MethodData
 import me.vladf.lsl.stages.scenario.entities.StateType
 import me.vldf.lsl.extractor.platform.AnalysisStage
 import me.vldf.lsl.extractor.platform.GlobalAnalysisContext
@@ -74,10 +75,19 @@ class ScenarioStage(override val name: String = "scenario-automation-stage") : A
         val constructors = automatonLsl?.constructors
 
         val shifts: List<Shift> = automaton.shifts.map { shift ->
-            val shiftFunctions = functions?.filter { shift.with.contains(it.name) }
+            val shiftFunctions = functions?.filter { function ->
+                if (!automaton.signature) {
+                    shift.with.map { it.name }.contains(function.name)
+                } else {
+                    shift.with.map { it.methodToLslFormat() }
+                        .contains(MethodData(function.name, function.args.map { it.typeReference.name }))
+                }
+            }
             val shiftFunctionsRefs = shiftFunctions?.map { it.getReference(globalContext) }?.toMutableList()
-            val constructorRef = constructors?.firstOrNull { shift.with.contains(it.name) }?.getReference(globalContext)
-            if (constructorRef != null) shiftFunctionsRefs?.add(constructorRef)
+            val constructorRefs =
+                constructors?.filter { constructor -> shift.with.map { it.name }.contains(constructor.name) }
+                    ?.map { it.getReference(globalContext) }
+            if (!constructorRefs.isNullOrEmpty()) shiftFunctionsRefs?.addAll(constructorRefs)
             Shift(states[shift.from]!!, states[shift.to]!!, shiftFunctionsRefs!!.toMutableList())
         }
 

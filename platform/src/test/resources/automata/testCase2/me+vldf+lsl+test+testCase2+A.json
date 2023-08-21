@@ -1,0 +1,94 @@
+{
+    "name": "me.vldf.lsl.test.testCase2.A",
+    "class": "me.vldf.lsl.test.testCase2.A",
+    "shifts": [
+        {
+            "from": "3",
+            "to": "1",
+            "with": [
+                {
+                    "name": "fun4",
+                    "args": [
+                    ]
+                }
+            ]
+        },
+        {
+            "from": "1",
+            "to": "2",
+            "with": [
+                {
+                    "name": "fun1",
+                    "args": [
+                    ]
+                }
+            ]
+        },
+        {
+            "from": "3",
+            "to": "2",
+            "with": [
+                {
+                    "name": "fun3",
+                    "args": [
+                        "byte",
+                        "java.lang.Byte",
+                        "java.lang.Character",
+                        "char",
+                        "java.lang.Short",
+                        "short",
+                        "java.lang.Long",
+                        "long",
+                        "java.lang.Float",
+                        "float",
+                        "java.lang.Double",
+                        "double"
+                    ]
+                }
+            ]
+        },
+        {
+            "from": "0",
+            "to": "1",
+            "with": [
+                {
+                    "name": "constructor",
+                    "args": [
+                    ]
+                }
+            ]
+        },
+        {
+            "from": "2",
+            "to": "3",
+            "with": [
+                {
+                    "name": "fun2",
+                    "args": [
+                        "me.vldf.lsl.test.testCase2.B",
+                        "java.lang.String"
+                    ]
+                }
+            ]
+        }
+    ],
+    "states": [
+        {
+            "name": "3",
+            "type": "DEF"
+        },
+        {
+            "name": "2",
+            "type": "DEF"
+        },
+        {
+            "name": "1",
+            "type": "DEF"
+        },
+        {
+            "name": "0",
+            "type": "INIT"
+        }
+    ],
+    "signature": true
+}
