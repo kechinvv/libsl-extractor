@@ -8,12 +8,10 @@ import me.vldf.lsl.extractor.platform.AnalysisStage
 import me.vldf.lsl.extractor.platform.GlobalAnalysisContext
 import me.vldf.lsl.extractor.platform.LibraryDescriptor
 import me.vldf.lsl.extractor.platform.platformLogger
-import me.vldf.lsl.jvm.reader.ClassManagerInitializer
 import org.jetbrains.research.libsl.context.LslGlobalContext
 import org.jetbrains.research.libsl.nodes.*
 import org.jetbrains.research.libsl.nodes.references.AutomatonReference
 import org.jetbrains.research.libsl.nodes.references.builders.FunctionReferenceBuilder.getReference
-import org.vorpal.research.kfg.ClassManager
 
 class ScenarioStage(override val name: String = "scenario-automation-stage") : AnalysisStage {
     private val logger by platformLogger()
@@ -24,7 +22,10 @@ class ScenarioStage(override val name: String = "scenario-automation-stage") : A
     private lateinit var globalContext: LslGlobalContext
     lateinit var automataRef: Map<String, AutomatonReference>
 
-
+    /***
+    The name of the parent folder must be equal to the library descriptor (name)
+    Library folders should be stored in the "automata" folder
+     ***/
     override fun run(analysisContext: GlobalAnalysisContext) {
         if (analysisContext.pipelineConfig.automatonFiles.size == 0) return
 
@@ -46,7 +47,6 @@ class ScenarioStage(override val name: String = "scenario-automation-stage") : A
     }
 
     private fun generateAutomata() {
-
         automataRef = library.automataReferences.associateBy { it.name }
 
         for (automatonFile in analysisContext.pipelineConfig.automatonFiles) {
@@ -60,8 +60,21 @@ class ScenarioStage(override val name: String = "scenario-automation-stage") : A
     }
 
     private fun generateAutomaton(automaton: Automaton, automatonReference: AutomatonReference) {
+        val states: Map<String, State> = getStates(automaton)
 
-        val states: Map<String, State> = automaton.states.associate {
+        val automatonLsl = automatonReference.resolve()
+        val functions = automatonLsl?.functions
+        val constructors = automatonLsl?.constructors
+
+        val shifts: List<Shift> = getShifts(automaton, functions, constructors, states)
+
+        automatonLsl?.states?.addAll(states.values)
+        automatonLsl?.shifts?.addAll(shifts)
+    }
+
+
+    private fun getStates(automaton: Automaton): Map<String, State> {
+        return automaton.states.associate {
             val stateKind = when (it.type) {
                 StateType.INIT -> StateKind.INIT
                 StateType.FIN -> StateKind.FINISH
@@ -69,12 +82,15 @@ class ScenarioStage(override val name: String = "scenario-automation-stage") : A
             }
             it.name to State(it.name, stateKind)
         }
+    }
 
-        val automatonLsl = automatonReference.resolve()
-        val functions = automatonLsl?.functions
-        val constructors = automatonLsl?.constructors
-
-        val shifts: List<Shift> = automaton.shifts.map { shift ->
+    private fun getShifts(
+        automaton: Automaton,
+        functions: List<org.jetbrains.research.libsl.nodes.Function>?,
+        constructors: MutableList<org.jetbrains.research.libsl.nodes.Function>?,
+        states: Map<String, State>
+    ): List<Shift> {
+        return automaton.shifts.map { shift ->
             val shiftFunctions = functions?.filter { function ->
                 if (!automaton.signature) {
                     shift.with.map { it.name }.contains(function.name)
@@ -90,9 +106,6 @@ class ScenarioStage(override val name: String = "scenario-automation-stage") : A
             if (!constructorRefs.isNullOrEmpty()) shiftFunctionsRefs?.addAll(constructorRefs)
             Shift(states[shift.from]!!, states[shift.to]!!, shiftFunctionsRefs!!.toMutableList())
         }
-
-        automatonLsl?.states?.addAll(states.values)
-        automatonLsl?.shifts?.addAll(shifts)
     }
 
 }
